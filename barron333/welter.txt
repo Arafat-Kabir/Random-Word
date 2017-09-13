@@ -1,10 +1,10 @@
 # w for word
-# m for meaning.Separated by ';'
-# s for sentence. Separated by dot(.)
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
 
 w: Welter
 
 m: (verb) move in a turbulant fashion; (noun) a large number of items in no order
 
-s: The streams foam and welter (verb). The classroom was in a welter when the teacher didn't show up
+s: The streams foam and welter (verb). The classroom was in a welter when the teacher didn't show up (noun)
 
