@@ -1,0 +1,5 @@
+#Enter the names of the folders containing word files in new line
+
+barron333
+barron800
+temp
