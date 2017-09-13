@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Vituperative
+
+m: (adj.) bitter & abusive, harsh, [offensive]
+
+s: We cannot be friends if you attack me with vituperative words. The student was given detention for using vituperative language in class

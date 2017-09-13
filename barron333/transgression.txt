@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Transgression
+
+m: (noun) offense, sin; an act that goes against law; violation of law
+
+s: The judge will decide the penalty for my transgression. Mark went to confession to apologize for this transgression

@@ -1,0 +1,10 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Veracious
+
+m: (adj.) Truthful, honest
+
+s: Always veracious, Grandma Marlene will tell you the truth even if it might hurt your feelings
+

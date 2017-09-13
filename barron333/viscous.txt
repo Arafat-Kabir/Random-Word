@@ -1,0 +1,10 @@
+# w for word
+# m for meaning.Separated by ';'
+# s for sentence. Separated by dot(.)
+
+w: Viscous
+
+m: (adj.) sticky, gluey
+
+s: [I'm not giving you a hint about it -_-]
+

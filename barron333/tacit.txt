@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Tacit
+
+m: (adj.) implied; understood without being stated
+
+s: In my business, all that is needed for a tacit understanding is a handshake between men. Your silence may be taken to mean tacit agreement

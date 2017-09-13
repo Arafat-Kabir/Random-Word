@@ -1,0 +1,10 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Truculent (noun: Truculence)
+
+m: (adj.) agressive, ferocious
+
+s: When we were touring on a river boat near Dandong the truculent North Korean soldiers gave us a death stare. When my uncle drinks too much he becomes very truculent and will fight anyone. Nuns are true lovers of peace and are never truculent
+

@@ -1,0 +1,10 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Vacillate
+
+m: (verb) indecisive; alternate between different opinions or actions; [oscillate between opinions]; [confused]
+
+s: I had for a time vacillated between teaching and journalism. If you ask Paula to choose a restaurant for lunch, she will vacillate between restaurants forever
+
