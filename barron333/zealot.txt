@@ -1,0 +1,10 @@
+# w for word
+# m for meaning.Separated by comma
+# s for sentence. Separated by dot(.)
+
+w:      Zealot
+
+m: Fanatic
+
+s: Sample Sentence 1. Sample Sentence 2.
+
