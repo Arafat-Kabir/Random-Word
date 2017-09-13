@@ -25,7 +25,8 @@ def extract(data, key):
 
 def close(message):
     print message
-    print 'Closing program...'
+    print 'Closing program'
+    raw_input('Press Enter to continue...')
     exit()
 
 def loadDictNames():
@@ -50,9 +51,9 @@ def selectDict(dictNames):
         if(dselect<len(dictNames)):
             return dictNames[dselect]
         else:
-            close(" Invalid input")
+            close("Invalid input")
     else:
-        close(" Invalid input")
+        close("Invalid input")
 
 
 def currentWord():
@@ -75,7 +76,7 @@ def nextWord():
         del wordList[indx]
         print " What do you understand by '"+curword+"'"
     else:
-        close(" No more words left")
+        close("No more words left")
 
 
 def showHint():
