@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Subside
+
+m: (verb) become less intense; sink (in case of water); go down to lower or the normal level
+
+s: I'll wait a few minutes until the storm subsides. The floods subside as quickly as they arise. The island is subsiding

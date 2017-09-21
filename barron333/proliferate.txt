@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Proliferate
+m: (verb) increase rapidly in numbers; multiply; spread rapidly or increase in number
+
+s: The science fiction magazines that proliferated in the 1920s. Rumors of a breakup began to proliferate when lynn was spotted about town with a different man. Once the weeds began to proliferate, Bella began calling her yard the "wildflower garden"

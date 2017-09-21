@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Recluse
+
+m: (noun) A person who lives in a solitary and avoid other people
+
+s: I am a very reclusive person

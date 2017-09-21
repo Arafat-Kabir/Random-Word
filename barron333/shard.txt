@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Shard
+
+m: (noun) a broken piece having sharp edges
+
+s: Shards of glass flew in all directions. A flying piece of metal hit the man's goggle and almost sent a shard into his eye. As the mirror crashed to the ground, shard after shard of glass scattered throughout the room

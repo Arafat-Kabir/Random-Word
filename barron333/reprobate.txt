@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Reprobate
+
+m: (noun/adj.) unprincipled person; wicked or evil person
+
+s: The serial killer was a reprobate who did not care about anyone. You need to go to a church and stop being a reprobate. Only a reprobate would kill an old woman

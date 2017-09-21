@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Pungent
+m: (adj.) having a sharply strong taste or smell
+
+s: The pungent smell of frying onions

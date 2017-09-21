@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Recondite
+
+m: (adj.) little known; secrete; not understood or known by many people
+
+s: The book is full of recondite information. The difficult concept of the physics theory was recondite to everyone but the scientists

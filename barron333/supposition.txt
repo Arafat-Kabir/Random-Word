@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Supposition
+
+m: (noun) Hypothesis; assumption; an uncertain belief
+
+s: Seriously! You need a hint?

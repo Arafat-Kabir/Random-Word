@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Propriety
+m: (noun) correctness of behaviour; correct conduct; the quality of conforming to conventionally accepted standards of behaviour or morals
+
+s: He always behaved with the utmost propriety. Afer Harold wore a clown suit to his cousin's funeral, we had to question his sense of propriety

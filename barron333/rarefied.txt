@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Rarefied
+
+m: (verb) made less dense
+
+s: No hint!

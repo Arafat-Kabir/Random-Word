@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Skeptic
+
+m: (noun) doubter; a person inclined to question or doubt all accepted opinion
+
+s: The scientist was a religious skeptic and had trouble believing God exists. Being a skeptic, the woman highly doubted that the psychic would really be able to tell her future

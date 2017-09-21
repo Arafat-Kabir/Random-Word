@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Propensity
+m: (noun) a naturaly inclination; tendency
+
+s: He has a propensity for violence. My mother has a propensity to drink when she gets anxious. His propensity to lie is going to get him into trouble

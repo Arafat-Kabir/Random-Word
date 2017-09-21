@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Prodigal
+m: (adj.) spending money or resources recklessly; wastefully extravagant; [opposite of frugal]
+
+s: We should be concerned about our future because of our prodigal youth. Jack's prodigal actions left him penniless and without a home

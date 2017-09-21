@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Supersede
+
+m: (verb) Replace; take place of (a person or thing previously in authority or use); To replace something or someone
+
+s: In time the features of the smartphone may supersede those of the personal computer. Kate hopes she can supersede her boss and take her position in the company

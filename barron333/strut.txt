@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Strut
+
+m: (noun) supporting bar; A rod or bar forming part of a framework and designed to resist compression; A stiff, errect and apparently arrogant manner;; (verb) pompous walk
+
+s: He struted around his vast office (verb). After he won the competition, he began his strut to the winners circle (verb). That old confident strut and swagger has returned (noun). We found the struts of a suspension bridge (noun)

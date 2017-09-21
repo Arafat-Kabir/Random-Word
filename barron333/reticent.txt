@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Reticent
+
+m: (adj.) reserved, uncommunicative; not revealing ones thoughts or feelings readily; [silent]
+
+s: While Barbara likes to discuss her personal life with co-workers, I am much more reticent. Rather than voice her political opinion, Eileen prefers to remain reticent

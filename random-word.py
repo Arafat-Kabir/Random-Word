@@ -78,13 +78,28 @@ def nextWord():
     else:
         close("No more words left")
 
+def selectWord():
+    global curword,means,sents
+    word = raw_input(" Enter the word: ")
+    word = word.strip().lower()
+    word = dictname+'\\'+word+'.txt'
+    if os.path.exists(word):
+        txt = open(word).read()
+        data = clean(txt)
+        curword = extract(data,'w')
+        means = extract(data,'m').split(';')
+        sents = extract(data,'s').split('.')
+        print " What do you understand by '"+curword+"'"
+    else:
+        print " No such word in the selected dictionary"
+
 
 def showHint():
     if curword=='':
         print " No word selected yet"
         return
     if len(sents)>0:
-        print ' Hint:',sents.pop().strip()
+        print ' Hint:',sents.pop(randint(0,len(sents)-1)).strip()
     else:
         print " No more hints left"
 
@@ -105,6 +120,7 @@ def printHelp():
     reveal: reveals the meanings
     this:   shows current word
     clear:  Clear the screen
+    select: Selec a word by typing it
     exit:   exit the program"""
 
 def clearScreen():
@@ -114,7 +130,7 @@ def clearScreen():
 os.system('cls')
 dictList = loadDictNames()
 dictname = selectDict(dictList)
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'clear':clearScreen, 'exit':exit}
+cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'clear':clearScreen, 'select':selectWord, 'exit':exit}
 
 print "Selected dictionary:",dictname
 
@@ -135,5 +151,3 @@ while True:
         cmdList.get(inp)()
     else:
         print " Invalid Command"
-
-

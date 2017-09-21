@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Propitiate
+m: (verb) appease; win or regain the favor of (a god, spirit or person) by doing something that pleases them
+
+s: The pegan thought it was important to propitiate the gods with sacrifices. My attempts to propitiate you is useless

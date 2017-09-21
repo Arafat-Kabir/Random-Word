@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Sage
+
+m: (noun) a profoundly wise man; scholar; a wise individual who gives others helpful advice
+
+s: The sage of the indian tribe was able to heal the badly wounded man. Since Andy had questions about saving money for his retirement, he sought advice from a financial sage

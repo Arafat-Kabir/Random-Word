@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Repudiate
+
+m: (verb) reject; refuse to support
+
+s: She has repudiated the policies of the past leaders. The company will repudiate any claimes of negligence. Jill is going to repudiate the bill as it is incorrect

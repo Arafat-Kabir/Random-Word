@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Stipulate
+
+m: (verb) demand or specify a requirement, typically as a part of a bargain or agreement; to insist upon something as a condition of agreement;; (adj.) a leaf or plant having stipules (in botany); [impose condition]
+
+s: He stipulated certain conditions before their marriage. The contracts of the baseball players stipulate they must attend all practices and games. When buying clothing, I generally avoid item that stipulate dry cleaning only.

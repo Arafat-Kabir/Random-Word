@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Recalcitrant
+
+m: (adj.) having obstinately uncooperative attitude; stubborn
+
+s: A class of recalcitrant students. The recalcitrant teenager gets into trouble everyday
