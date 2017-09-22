@@ -93,6 +93,13 @@ def selectWord():
     else:
         print " No such word in the selected dictionary"
 
+def showRemaining():
+    print ' Remaining words in the dictionary are:'
+    for w in wordList:
+        print '   ',w.replace('.txt','')
+    print '\n Total remaining:',len(wordList),'words'
+
+
 
 def showHint():
     if curword=='':
@@ -114,14 +121,15 @@ def showMeaning():
 
 def printHelp():
     print """Following commands are Available:
-    help:   prints this help message
-    next:   show a new random word
-    hint:   shows a sentences using the current word
-    reveal: reveals the meanings
-    this:   shows current word
-    clear:  Clear the screen
-    select: Selec a word by typing it
-    exit:   exit the program"""
+    help:      prints this help message
+    next:      show a new random word
+    hint:      shows a sentences using the current word
+    reveal:    reveals the meanings
+    this:      shows current word
+    clear:     Clear the screen
+    select:    Select a word by typing it
+    remaining: Shows the remaining words in the dictionary
+    exit:      exit the program"""
 
 def clearScreen():
     os.system('cls')
@@ -130,7 +138,7 @@ def clearScreen():
 os.system('cls')
 dictList = loadDictNames()
 dictname = selectDict(dictList)
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'clear':clearScreen, 'select':selectWord, 'exit':exit}
+cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord, 'exit':exit}
 
 print "Selected dictionary:",dictname
 
