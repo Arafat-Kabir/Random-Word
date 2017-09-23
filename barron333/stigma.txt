@@ -4,6 +4,6 @@
 
 w: Stigma
 
-m: (noun) token of disgrace; a mark of disgrace associated with a particular circumstances, quality or person
+m: (noun); token of disgrace; a mark of disgrace associated with a particular circumstances, quality or person
 
 s: The stigma of having gone to prison will always be with me. There is a stigma attached to AIDS that makes most people afraid of those who have the disease

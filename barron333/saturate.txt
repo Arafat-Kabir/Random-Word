@@ -4,6 +4,6 @@
 
 w: Saturate
 
-m: (verb) cause (something) to become thoroughtly soacked; to fill something with upmost capacity
+m: (verb); cause (something) to become thoroughtly soacked; to fill something with upmost capacity
 
 s: The soil is saturated. The company hopes to saturate the market with their products so consumers will think of its brand first

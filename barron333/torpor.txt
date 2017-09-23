@@ -4,6 +4,6 @@
 
 w: Torpor
 
-m: (noun) state of physical or mental inactivity; state of being inactive; [inactivity]
+m: (noun); state of physical or mental inactivity; state of being inactive; [inactivity]
 
 s: During winter, the bears fall into intense torpor. After a 5 years torpor, the singer released a new album

@@ -4,6 +4,6 @@
 
 w: Tirade
 
-m: (noun) long and angry speech; A long, angry speech of criticism or accusation
+m: (noun); long and angry speech; A long, angry speech of criticism or accusation
 
 s: The fan began his tirade by burning his jersey outside the football stadium. The politician's tirade against the proposed law lasted nearly 2 hours

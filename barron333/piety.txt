@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Piety
+m: (noun); The quality of being religious or reverent; respect and devotion to a higer power
+
+s: Out of a feeling of piety, the man donated all of his money to the church. Because Lester did not live a life of piety, he can not be buried in the church cemetery

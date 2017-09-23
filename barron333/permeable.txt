@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Permeable
+m: (adj.); penetrable
+
+s: Nothing :P

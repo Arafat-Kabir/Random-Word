@@ -4,6 +4,6 @@
 
 w: Sanction
 
-m: (noun/verb) official permission or approval for an action
+m: (noun/verb); official permission or approval for an action
 
 s: The government will never sanction drinking and driving because it is unsafe. If the singer does not sanction the liscence, you cannot use her music in your film

@@ -94,10 +94,15 @@ def selectWord():
         print " No such word in the selected dictionary"
 
 def showRemaining():
-    print ' Remaining words in the dictionary are:'
+    print ' Remaining words in the dictionary are:\n'
+    i = 0
     for w in wordList:
-        print '   ',w.replace('.txt','')
-    print '\n Total remaining:',len(wordList),'words'
+        print '   %-15s' %w.replace('.txt',''),
+        i += 1
+        if i==4:
+            print ''
+            i=0
+    print '\n\n Total remaining:',len(wordList),'words'
 
 
 

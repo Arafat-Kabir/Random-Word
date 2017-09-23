@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Prohibitive
-m: (adj.) tending to prohibit
+m: (adj.); tending to prohibit
 
 s: No hint, sorry!

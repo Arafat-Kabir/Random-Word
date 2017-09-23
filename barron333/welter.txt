@@ -4,7 +4,7 @@
 
 w: Welter
 
-m: (verb) move in a turbulant fashion; (noun) a large number of items in no order
+m: (verb); move in a turbulant fashion; (noun) a large number of items in no order
 
 s: The streams foam and welter (verb). The classroom was in a welter when the teacher didn't show up (noun)
 

@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Qualified
-m: (adj.) not complete or absolute; limited
+m: (adj.); not complete or absolute; limited
 
 s: I could only judge this CD as a qualified success

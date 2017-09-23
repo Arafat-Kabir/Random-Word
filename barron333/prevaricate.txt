@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Prevaricate
+m: (verb); speak or act in an evasive way; lie
+
+s: He seemed to prevaricate when journalists asked pointed questions. When you prevaricate, you only make a complicated situation worse than it already is. In most cases, it is easier to tell the truth than to try and prevaricate your way out of a sticky situation

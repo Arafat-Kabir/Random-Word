@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Pathological
+m: (adj.); relating to pathology; pertaining to desease; in an unusual or unhealthy manner [sick mentality]; obsessive
+
+s: A patholigical gambler. My sister is a patholigical liar who never speaks the truth. Unfortunately the doctor believes my patholigical symptoms are indicative of cancer

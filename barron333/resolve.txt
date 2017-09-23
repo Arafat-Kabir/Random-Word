@@ -4,6 +4,6 @@
 
 w: Resolve
 
-m: (verb) decide firmly on course of action
+m: (verb); decide firmly on course of action
 
 s: No hint, sorry :P

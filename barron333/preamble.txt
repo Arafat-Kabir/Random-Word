@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Preamble
+m: (noun); introductory statement; an introduction; an opening announcement used to describe what is about to be read or said
+
+s: What she said was by way of a preamble. The preamble of international health organization summarizes the groups purpose. The preamble of the directors biography lists the entertainment icon as a fourtime academy award winner

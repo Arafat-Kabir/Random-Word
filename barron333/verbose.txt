@@ -4,7 +4,7 @@
 
 w: Verbose
 
-m: (adj.) wordy; expressed in more words than needed
+m: (adj.); wordy; expressed in more words than needed
 
 s: The verbose man took 30 mins to give me a simple answer. My niece is a verbose teenager who talks nonstop about clothes and makeup
 

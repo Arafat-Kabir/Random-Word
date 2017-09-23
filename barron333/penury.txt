@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Penury
+m: (noun); extreme poverty
+
+s: My uncle wasted his fortune and died in penury.  Because my family grew up in penury, I know the true value of a dollar

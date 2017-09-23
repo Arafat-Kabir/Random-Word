@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Perfidious
+m: (adj.); deceitful and untrustworthy
+
+s: Perfidious lover. Mechelle sought revenge on her perfidious friend who stole her lottery ticket. Because Lawrence is such a perfidious person you cannot believe a word he says

@@ -4,6 +4,6 @@
 
 w: Rarefied
 
-m: (verb) made less dense
+m: (verb); made less dense
 
 s: No hint!

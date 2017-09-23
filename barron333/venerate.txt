@@ -4,7 +4,7 @@
 
 w: Venerate
 
-m: (verb) regard with great respect; to respect or worship
+m: (verb); regard with great respect; to respect or worship
 
 s: Mother Teresa is venerated as a saint. The Bible says we should venerate our parents and our elders. Many people attend church services to venerate God
 

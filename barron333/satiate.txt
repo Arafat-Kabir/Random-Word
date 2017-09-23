@@ -4,6 +4,6 @@
 
 w: Satiate
 
-m: (verb) to satisfy fully
+m: (verb); to satisfy fully
 
 s: Hopefully this feast I am preparing will satiate your hunger. He folded up his newspaper, his curiosity satiated. A trip to the library will satiate his thirst for knowledge

@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Quibble
-m: (noun) minor objection or complaint; quarrel
+m: (noun); minor objection or complaint; quarrel
 
 s: The only quibble about this book is the price. The twins will quibble for hours about what to watch on TV

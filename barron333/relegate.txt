@@ -4,6 +4,6 @@
 
 w: Relegate
 
-m: (verb) dismiss to an inferior rank or position
+m: (verb); dismiss to an inferior rank or position
 
 s: I'll not give any hint

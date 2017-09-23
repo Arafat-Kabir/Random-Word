@@ -4,6 +4,6 @@
 
 w: Subpoena
 
-m: (noun) a writ (written document) ordering a person to attend a court; (verb) summon a witness to appear
+m: (noun); a writ (written document) ordering a person to attend a court; (verb) summon a witness to appear
 
 s: A subpoena may be issued to compel their attendance (noun). The queen is above the law and cannot be subpoened (verb). As soon as I received the subpoena, I knew I had to testify during the trial (noun)

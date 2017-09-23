@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Precursor
+m: (noun); a forerunner; a person or thing that comes before another of the same kind; [symptom]
+
+s: All too often, high blood pressure is a precursor of heart disease. After watching my nephew for a while, I can easily recognize his moodiness as a precursor to naptime. Obtaining an undergraduate degree is a definite precursor to going to graduate school

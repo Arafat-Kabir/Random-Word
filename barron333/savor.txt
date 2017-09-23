@@ -4,6 +4,6 @@
 
 w: Savor
 
-m: (verb) taste and enjoy it completely; enjoy; to take delight in something for a long period of time;;(noun) a characteristic taste, flavour or smell
+m: (verb); taste and enjoy it completely; enjoy; to take delight in something for a long period of time;;(noun) a characteristic taste, flavour or smell
 
 s: I wanted to savor every moment (verb). The subtle savor of wood smoke (noun)

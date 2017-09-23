@@ -4,6 +4,6 @@
 
 w: Recluse
 
-m: (noun) A person who lives in a solitary and avoid other people
+m: (noun); A person who lives in a solitary and avoid other people
 
 s: I am a very reclusive person

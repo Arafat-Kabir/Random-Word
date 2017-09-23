@@ -4,6 +4,6 @@
 
 w: Resolution
 
-m: (noun) firm determination; the action of solving problem
+m: (noun); firm determination; the action of solving problem
 
 s: No hint, sorry :P

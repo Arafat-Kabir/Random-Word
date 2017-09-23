@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Precipitate
+m: (verb); cause to happen suddenly; move suddenly with force; [cause]
+
+s: The incident precipitated a political crisis. Suddenly the ladder broke precipitating them down into a heap. Drinking in excess will precipitate liver diseases

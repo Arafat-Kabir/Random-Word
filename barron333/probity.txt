@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Probity
+m: (noun); uprightness; incorruptibility; the quality of having strong moral principles; honesty & decency; being completely honest
+
+s: The criminal knew he could not buy the judge who was known for his probity. Banks only hire people with reputation of probity. When the police officer refused a million dollar bribe he let everyone know he was a man of probity

@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Plasticity
+m: (noun); ability to be modeled; changeability
+
+s: Bending the object into new shape, the child was surprised by its plasticity. The neurosurgeon explained that brain plasticity refers to the brain's ability to change and grow over time

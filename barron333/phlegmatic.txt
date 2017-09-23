@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Phlegmatic
+m: (adj.); not easily upset, excited or angered
+
+s: The minister of my church is a phlegmatic man, who never gets upset about anything. The normally phlegmatic man could not help but yell when he won a gigantic lottery prize. She is very plegmatic and rarely raise her voice

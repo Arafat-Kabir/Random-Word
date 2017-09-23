@@ -4,6 +4,6 @@
 
 w: Substantiate
 
-m: (verb) provide evidence to support or prove the truth of something; to prove the truth of something; [prove]
+m: (verb); provide evidence to support or prove the truth of something; to prove the truth of something; [prove]
 
 s: They had found nothing to substantiate the allegation. How do you plan to substantiate your right to inherit the billionair's fortune?. To get a good grade on the research project, you must substantiate your report with provable facts

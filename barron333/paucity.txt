@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Paucity
+m: (noun); scarcity
+
+s: A paucity of information. Because of the paucity of our oil supply, we need to seek out other fuel resources

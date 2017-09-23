@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Pristine
+m: (adj.); unchanged; still pure; in its original condition; unspoiled
+
+s: Pristine copies of an early magazine. A pristine white shirt. My uncle's antique car is pristine and has all its original parts. The improper disposal of trash has sullied pristine ocean waters

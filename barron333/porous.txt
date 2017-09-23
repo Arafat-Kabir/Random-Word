@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Porous
+m: (adj.); full of pores
+
+s: No hint, sorry :P

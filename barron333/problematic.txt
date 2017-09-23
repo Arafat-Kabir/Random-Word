@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Problematic
-m: (adj.) difficult
+m: (adj.); difficult
 
 s: Seriously! you need a hint?

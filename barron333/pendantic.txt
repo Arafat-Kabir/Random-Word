@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Pedantic
+m: (adj.); bookish; showing off learning; giving too much importance to details and formal rules; [nerd]
+
+s: Many of these essays are long, dense and too pedantic to hold great appeal. As a grammer teacher, it is  hard for me to not review everything with a pedantic eye

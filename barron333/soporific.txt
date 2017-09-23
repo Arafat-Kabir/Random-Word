@@ -4,6 +4,6 @@
 
 w: Soporific
 
-m: (adj.) sleep causing; marked by sleepiness;;(noun) a drug that induces sleep
+m: (adj.); sleep causing; marked by sleepiness;;(noun) a drug that induces sleep
 
 s: The motion of the train had a somewhat soporific effect (adj). The presentation was soporific (adj). She was given a soporific (noun)

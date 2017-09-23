@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Plethora
+m: (noun); a large or excessive amount of something; over abundance
+
+s: A plethora of committees and subcommittees. He eagerly accepted the job because it came with a plethora of opportunities

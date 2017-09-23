@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Proscribe
-m: (verb) forbid
+m: (verb); forbid
 
 s: Strikes remained proscribed in the armed forces. Most states have laws that proscribe texting while driving

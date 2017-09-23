@@ -3,6 +3,6 @@
 # s for sentences, Separated by dot(.)
 
 w: Profound
-m: (adj.) deep; intense
+m: (adj.); deep; intense
 
 s: Profound social changes. A profound philosopher

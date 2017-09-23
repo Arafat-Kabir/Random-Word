@@ -4,7 +4,7 @@
 
 w: Viscous
 
-m: (adj.) sticky, gluey
+m: (adj.); sticky, gluey
 
 s: [I'm not giving you a hint about it -_-]
 

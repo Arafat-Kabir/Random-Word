@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Perennial
+m: (adj.); long lasting
+
+s: He has a perennial distrust of the media. Because she is a perennial opimist, it's unusual for anything to bring her down

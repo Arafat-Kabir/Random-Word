@@ -4,6 +4,6 @@
 
 w: Spectrum
 
-m: (noun) a wide range
+m: (noun); a wide range
 
 s: Seriously dude! you need a hint?

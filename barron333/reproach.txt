@@ -4,6 +4,6 @@
 
 w: Reproch
 
-m: (noun/verb) accuse someone; address in such a way to express disappointment, disgrace or scandal
+m: (noun/verb); accuse someone; address in such a way to express disappointment, disgrace or scandal
 
 s: Critics of the administration reproached the president for his failure. The politician's failed actions have brought reproach to the entire government

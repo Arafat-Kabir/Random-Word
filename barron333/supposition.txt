@@ -4,6 +4,6 @@
 
 w: Supposition
 
-m: (noun) Hypothesis; assumption; an uncertain belief
+m: (noun); Hypothesis; assumption; an uncertain belief
 
 s: Seriously! You need a hint?

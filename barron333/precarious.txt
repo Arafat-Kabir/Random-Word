@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Precarious
+m: (adj.); uncertain, risky; unstable; dangerous
+
+s: She made a precarious living by writing. Running around with a knife is very precarious. Unless we resolve this, our future looks precarious

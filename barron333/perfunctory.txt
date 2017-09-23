@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Perfunctory
+m: (adj.); superficial; lacking interest, care or enthusiasm; done routinely with little interest or care
+
+s: The beauty queen waved so often that her greeting was simply perfunctory. When we went out to dinner last night, the bored hostess gave us a perfunctory hello
