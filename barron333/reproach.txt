@@ -2,7 +2,7 @@
 # m for meanings, Separated by ';'
 # s for sentences, Separated by dot(.)
 
-w: Reproch
+w: Reproach
 
 m: (noun/verb); accuse someone; address in such a way to express disappointment, disgrace or scandal
 

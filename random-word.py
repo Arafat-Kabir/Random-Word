@@ -17,17 +17,22 @@ def clean(text):
     return lines
 
 
+
 def extract(data, key):
     """Returns the line starting with the 'key'"""
     for d in data:
         if d.startswith(key):
             return d.replace(key+':','').strip()   #remove the parser tag then remove the spaces
 
+
+
 def close(message):
     print message
     print 'Closing program'
     raw_input('Press Enter to continue...')
     exit()
+
+
 
 def loadDictNames():
     """Read the dictionary listing file and return the dictionary names as a list"""
@@ -37,6 +42,7 @@ def loadDictNames():
         close('No Dictionary found')
         exit()
     return lst
+
 
 
 def selectDict(dictNames):
@@ -56,11 +62,13 @@ def selectDict(dictNames):
         close("Invalid input")
 
 
+
 def currentWord():
     if curword != '':
         print ' Current Word:',curword
     else:
         print " No word selected yet"
+
 
 
 def nextWord():
@@ -78,11 +86,26 @@ def nextWord():
     else:
         close("No more words left")
 
+
+
 def selectWord():
-    global curword,means,sents
-    word = raw_input(" Enter the word: ")
+    global curword,means,sents,inp
+    word = ''
+    # read second argument a the selected word
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            word = raw_input(" Enter the word: ")
+        else:
+            word = inp[1]
+    else:
+        word = raw_input(" Enter the word: ")
+    #process the input
     word = word.strip().lower()
+    if word == '':
+        return        
     word = dictname+'\\'+word+'.txt'
+    #read the word from file
     if os.path.exists(word):
         txt = open(word).read()
         data = clean(txt)
@@ -92,6 +115,8 @@ def selectWord():
         print " What do you understand by '"+curword+"'"
     else:
         print " No such word in the selected dictionary"
+
+
 
 def showRemaining():
     print ' Remaining words in the dictionary are:\n'
@@ -116,28 +141,34 @@ def showHint():
         print " No more hints left"
 
 
+
 def showMeaning():
     if curword=='':
-        print "No word selected yet"
+        print " No word selected yet"
         return    
     for m in means:
         print '',m.strip()
 
 
+
 def printHelp():
     print """Following commands are Available:
     help:      prints this help message
-    next:      show a new random word
+    next:      select a new word randomly
     hint:      shows a sentences using the current word
-    reveal:    reveals the meanings
+    reveal:    reveals the meanings of current word
     this:      shows current word
     clear:     Clear the screen
     select:    Select a word by typing it
     remaining: Shows the remaining words in the dictionary
     exit:      exit the program"""
 
+
+
 def clearScreen():
     os.system('cls')
+
+
 
 #------ Main Program ------
 os.system('cls')
@@ -151,16 +182,17 @@ wordList = os.listdir(os.getcwd()+'\\'+dictname)
 curword = ''
 means = []
 sents = []
+inp = []
 
 print ''
 printHelp()
 while True:
-    inp = raw_input("\ncommand$> ")
-    inp = inp.strip().lower()
-    if(inp==''):
+    inp = raw_input("\ncommand> ").split(' ')
+    inp[0] = inp[0].strip().lower()
+    if(inp[0]==''):
         continue
-    if cmdList.has_key(inp):
+    if cmdList.has_key(inp[0]):
         print ""
-        cmdList.get(inp)()
+        cmdList.get(inp[0])()
     else:
         print " Invalid Command"
