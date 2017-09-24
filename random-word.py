@@ -117,6 +117,10 @@ def selectWord():
         means = extract(data,'m').split(';')
         sents = extract(data,'s').split('.')
         print " What do you understand by '"+curword+"'"
+        #remove it from the wordlist
+        wordfile = curword.lower()+'.txt'
+        if wordfile in wordList:
+            wordList.remove(wordfile)
     else:
         print " No such word in the selected dictionary"
 
@@ -175,6 +179,21 @@ def markHard():
 
 
 
+def unmarkHard():
+    #error handling 
+    if curword=='':
+        print " No word selected yet"
+        return         
+    dest = loc.replace(dictname,'hard')
+    if os.path.exists(dest)==False:
+        print " '"+curword+"' is not in the 'hard' dictionary"
+        return
+    #delete the file
+    os.remove(dest)
+    print " '"+curword+"'","removed from the 'hard' dictionary"
+
+
+
 def printHelp():
     print """Following commands are Available:
     help:      prints this help message
@@ -182,7 +201,8 @@ def printHelp():
     hint:      shows a sentences using the current word
     reveal:    reveals the meanings of current word
     this:      shows current word
-    mark-hard: Copies the current word into the hard dictionary
+    mark-hard: Copies the current word into the 'hard' dictionary
+    not-hard:  Removes the current word from the 'hard' dictionary
     clear:     Clear the screen
     select:    Select a word by typing it
     remaining: Shows the remaining words in the dictionary
@@ -199,7 +219,7 @@ def clearScreen():
 os.system('cls')
 dictList = loadDictNames()
 dictname = selectDict(dictList)
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'mark-hard':markHard, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord, 'exit':exit}
+cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord, 'exit':exit}
 
 print "Selected dictionary:",dictname
 
