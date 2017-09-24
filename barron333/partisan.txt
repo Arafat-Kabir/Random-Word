@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Partisan
+m: (noun); committed to a party; strong supporter of a party; one sided; biased
+
+s: Because of your partisan views, you are unwilling to look at other options. If you continue to follow your partisan plan and ignore other options, you are going to fail

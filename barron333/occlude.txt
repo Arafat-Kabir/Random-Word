@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Occlude
+m: (verb); shut; close up; obstruct
+s: Thick makeup can occlude the pores. It looks like the clouds are going to occlude the sun and ruin my picnic

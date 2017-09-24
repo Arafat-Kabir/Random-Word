@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Neophyte
+m: (noun); a person who is new to a subject, skill or belief; beginner
+s: Since this is my daughter's first swime lesson, she is definitely a neophyte in the sport. Even the master was a neophyte once

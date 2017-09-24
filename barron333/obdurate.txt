@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Obdurate
+m: (adj.); obstinate; stubborn
+s: Sometimes you are too obdurate for your own good. Despite the defendant's apology the judge was obdurate and gave him 30 years of sentence

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Onerous
+m: (adj.); burdensome; involving great effort and difficulty
+s: Completing the undergraduate thesis was onerous. Wesley found his new job onerous

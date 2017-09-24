@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Obsequious
+m: (adj.); overly obidient; obidient or attentive to excessive degree
+s: They were served by obsequious waiters. The princess had obequious servants who showered hier with attention

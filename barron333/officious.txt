@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Officious
+m: (adj.); excessively pushy in offering one's service; offensively intrusive or interfering; [nijeke korta mone kore]
+s: Mary doesn't like it when officious strangers try to start a conversation in the checkout line. The librarian is an officious old bat who is always trying to tell me what I should or shouldn't be reading

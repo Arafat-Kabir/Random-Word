@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Obviate
+m: (verb); remove (a need or difficulty); get rid of; eliminate; prevent
+s: The venetian blinds obviated the need for curtains. A parachute can be used to obviate disaster. We replaced the old mechanism because we wanted to obviate any nervousness about potental breakdown

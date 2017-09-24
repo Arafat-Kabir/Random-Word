@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Ostentatious
+m: (adj.); pretentious; vulgar display; intended to attract others in an extreme and unnecessary way
+s: I tried to tell Mary her fur coat was a bit too ostentatious to be worn at a funeral. In order to avoid robbery targets, tourists are encouraged to not wear ostentaious jewelry

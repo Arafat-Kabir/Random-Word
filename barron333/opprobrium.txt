@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Opprobrium
+m: (noun); infamy; harsh criticism; [A disgrace]
+s: Ben's criminal opprobrium nealy cost his election. The government is willing to ignore public opprobrium and build the highway through the city park

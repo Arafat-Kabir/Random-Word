@@ -1,4 +1,4 @@
 w: Warrant
-m: (verb); justify or necessitate; (verb) officially affirm or guarantee
+m: (verb); justify or necessitate;; (verb); officially affirm or guarantee
 
 s: That offense is serious enough to warrant a court martial. The vendor warrants the accuracy of the report

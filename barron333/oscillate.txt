@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Oscillate
+m: (verb); vibrate; waver
+s: Seriously dude! you need a hint -_-
