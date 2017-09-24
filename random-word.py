@@ -1,5 +1,7 @@
 import os
 from random import randint
+from shutil import copyfile
+
 
 def clean(text):
     """Removes the comments and redundant spaces and returns a list of lines"""
@@ -72,11 +74,12 @@ def currentWord():
 
 
 def nextWord():
-    global curword,means,sents
+    global curword,means,sents,loc
     wleft = len(wordList)
     if wleft>0:
         indx = randint(0,wleft-1)
-        txt = open(dictname+'\\'+wordList[indx]).read()
+        loc = dictname+'\\'+wordList[indx]
+        txt = open(loc).read()
         data = clean(txt)
         curword = extract(data,'w')
         means = extract(data,'m').split(';')
@@ -89,7 +92,7 @@ def nextWord():
 
 
 def selectWord():
-    global curword,means,sents,inp
+    global curword,means,sents,inp,loc
     word = ''
     # read second argument a the selected word
     if len(inp)>1:
@@ -107,6 +110,7 @@ def selectWord():
     word = dictname+'\\'+word+'.txt'
     #read the word from file
     if os.path.exists(word):
+        loc = word
         txt = open(word).read()
         data = clean(txt)
         curword = extract(data,'w')
@@ -151,6 +155,26 @@ def showMeaning():
 
 
 
+def markHard():   
+    #error handling 
+    if curword=='':
+        print " No word selected yet"
+        return         
+    if os.path.exists(loc)==False:
+        print " File not found:",loc
+        return
+    dest = loc.replace(dictname,'hard')
+    if os.path.exists(dest):
+        print " Word is already marked as hard"
+        return
+    if os.path.exists('hard\\')==False:
+        os.mkdir('hard')
+    #copy the file
+    copyfile(loc, dest)
+    print " '"+curword+"'","added to the 'hard' dictionary"
+
+
+
 def printHelp():
     print """Following commands are Available:
     help:      prints this help message
@@ -158,6 +182,7 @@ def printHelp():
     hint:      shows a sentences using the current word
     reveal:    reveals the meanings of current word
     this:      shows current word
+    mark-hard: Copies the current word into the hard dictionary
     clear:     Clear the screen
     select:    Select a word by typing it
     remaining: Shows the remaining words in the dictionary
@@ -174,11 +199,12 @@ def clearScreen():
 os.system('cls')
 dictList = loadDictNames()
 dictname = selectDict(dictList)
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord, 'exit':exit}
+cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'mark-hard':markHard, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord, 'exit':exit}
 
 print "Selected dictionary:",dictname
 
 wordList = os.listdir(os.getcwd()+'\\'+dictname)
+loc = ''
 curword = ''
 means = []
 sents = []

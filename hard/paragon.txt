@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Paragon
+m: (noun); a model of excellence or perfection
+
+s: As a paragon of purity, a nun would never dress inappropriately. Since I am in poor health, I am not a paragon of wellness

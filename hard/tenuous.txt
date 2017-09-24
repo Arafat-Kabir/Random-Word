@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Tenuous
+
+m: (adj.); thin, slim; very weak
+
+s: Because the evidence against her is tenuous, the accused murderer will be released. Although the frozen lake was quite tenuous and unstable, Henry still decided to cross it on foot. A tenuous thread
