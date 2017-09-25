@@ -1,0 +1,9 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Refute
+
+m: (verb); to prove a theory wrong; disprove; to prove wrong by evidence
+
+s: These claims have not been convincingly refuted. The evidence provided by the prosecutor will refute the defendant's claim of innocence

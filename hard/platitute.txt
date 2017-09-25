@@ -1,0 +1,8 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Platitude
+m: (noun); a very common remark; something that has been said so often that it is not interesting anymore; [gotanugotik]
+
+s: Because I have heard your platitude a hundred times, it means nothing to me now. At my uncle's funeral, I heard one platitude after another. Your platitude is meaningless and does nothing for my anger

@@ -1,8 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Plummet
-m: (verb); drop abruptly; fall suddenly; decrease rapidly in value or amount
-
-s: A climber was killed when he plummeted 300 feet down an icy gully. Hardware sales plummeted. If the temperature begins to plummet, coat sales are sure to increase. The increase in bear population has caused the salmon poplulation to plummet
