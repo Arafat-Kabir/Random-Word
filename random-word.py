@@ -150,7 +150,7 @@ def showRemaining():
     #print the remaining words
     i = 0
     for w in wordList:
-        print '   %-15s' %w.replace('.txt',''),
+        print '   %-15s' %w.replace('.txt','').capitalize(),
         i += 1
         if i==cols:
             print ''
@@ -200,7 +200,7 @@ def relateFile():
             print " Related to",key.upper()+': ',str(len(searchResult[key])),'results'
             i = 0
             for r in searchResult[key]:
-                print '   %-15s' %r,
+                print '   %-15s' %r.capitalize(),
                 i += 1
                 if i==cols:
                     i = 0
@@ -214,7 +214,7 @@ def showHint():
         print " No word selected yet\n"
         return
     if len(sents)>0:
-        print ' Hint:',sents.pop(randint(0,len(sents)-1)).strip()+'\n'
+        print ' Hint: ',sents.pop(randint(0,len(sents)-1)).strip()+'\n'
     else:
         print " No more hints left\n"
 
@@ -266,10 +266,10 @@ def unmarkHard():
 
 
 def printHelp():
-    print """Following commands are Available:
+    print """ Following commands are Available:
     help:      prints this help message
     next:      select a new word randomly
-    hint:      shows a sentences using the current word
+    hint:      shows a sentence using the current word
     reveal:    reveals the meanings of current word
     this:      shows select word and dictionary name
     mark-hard: Copies the current word into the 'hard' dictionary
