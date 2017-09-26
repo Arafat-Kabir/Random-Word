@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Irascible
+m: (adj.); easily angered; irritable; [Selim]
+s: While Charles is very irascible, his wife is calm and relaxed. He was an irascible leader who was so quick to start wars with neighboring countries

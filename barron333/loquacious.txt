@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Loquacious
+m: (adj.); talkative; garrulous
+s: After drinking four beers, my normally quiet wife becomes loquacious. There is nothing worse than having a loquacious person sit next to you on an airplane

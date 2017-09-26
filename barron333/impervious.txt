@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Impervious
+m: (adj.); impenetrable; unable to be affected by; not allowing fluid to pass
+s: The broken window was not impervious to the rain. Since the bak installed an impervious safe, it has not been robbed. The chemical treatment makes the fireman's uniform impervious to flames

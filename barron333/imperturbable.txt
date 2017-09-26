@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Imperturbable
+m: (adj.); unable to be upset or excited; calm; not disturbed easily
+s: The imperturbable actress carried on with her performance even when her costar forgot his lines. The imperturbable spy refused to give out secret information during his interrogation

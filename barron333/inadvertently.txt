@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Inadvertently
+m: (adj.); unintentionally; accidentally
+s: His name was inadvertently omitted from the list. Do you know that I am getting inadvertent calls from your cell phone?

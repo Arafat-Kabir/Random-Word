@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Mitigate
+m: (verb); appease; moderate; make something less severe
+s: He wanted to mitigate misery in the world. The doctor gave me a prescription to mitigate the pain. The UN will try to mitigate the crisis between the two countries

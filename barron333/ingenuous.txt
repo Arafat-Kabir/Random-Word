@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Ingenuous
+m: (adj.); innocent and unsuspecting; naive and trusting; [boka]
+s: Jessica's ingenuous nature made her an easy target for the con man. My ingenuous six-year old sister still believes there is an eastern bunny

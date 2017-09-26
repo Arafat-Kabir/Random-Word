@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Negate
+m: (verb); nullify; cancel; make ineffective
+s: Alcohol negates the effects of the drug. Having our luggage stolen did not negate the fantastic time we had on our cruise

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Intransigence
+m: (noun); uncompromising
+s: In the face of government intransigence, he resigned in disgust. My atheist neighbour is intransigent and unwilling to listen to my christian views

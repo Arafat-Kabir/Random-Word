@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Lucid
+m: (adj.); easily understood; clear; thinking clearly
+s: Because the medicine made Lira drowsy, she was not very lucid. The directions for assembling the complex table was not very lucid

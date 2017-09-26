@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Implicit
+m: (adj.); implied though not plainly expressed; understood though not directly stated
+s: 

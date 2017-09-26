@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Insipid
+m: (adj.); lacking flavour; dull or boring; [boring]
+s: The soup lacks the right seasoning and tastes insipid. The little boy did not enjoy having to sit still during the insipid church service

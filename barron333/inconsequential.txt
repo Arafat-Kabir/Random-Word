@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Inconsequential
+m: (adj.); unimportant; insignificant
+s: They talked about inconsequential things. The billionaire considered a $500 tip inconsequential

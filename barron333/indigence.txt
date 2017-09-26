@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Indigence
+m: (noun); extreme poverty
+s: He did valuable work toward the relief of indigence. The indigent man could not afford food or clothing

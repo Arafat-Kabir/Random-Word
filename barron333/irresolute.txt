@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Irresolute
+m: (adj.); showing or feeling hesitancy; not certain about something
+s: She stood irresolute outside his door. The movie's irresolute ending left the viewers wondering what happened to the heroine and her true love

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Malleable
+m: (adj.); capable of being shaped by hammering; capable of being influenced
+s: Knowledge gives you power by making you less malleable to negative influences. If you are too malleable, people will try to take advantage of you

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Impassive
+m: (adj.); expressionless; not feeling or showing emotion
+s: Impassive passerby ignore the performers. It's difficult to remain impassive when you are faced with a life or death situation

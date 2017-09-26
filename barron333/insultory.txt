@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Insultory
+m: (noun); ignorance or lack of interest in cultures; not intersted in learning new ideas; narrow-minded; isolation;
+s: Because the insultory man had lived on a deserted island for years, he was not very good at making conversation. Because you are a world traveller, you should not have such insular views

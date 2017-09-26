@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Meticulous
+m: (adj.); excessively careful; very careful and precise
+s: He had always been so meticulous about his appearance. This accounting job requires a meticulous person

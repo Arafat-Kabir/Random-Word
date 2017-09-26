@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Laud
+m: (verb); praise
+s: The company decided to laud Jack's outstanding contributions. The purpose of the award is to laud students for their academic excellence

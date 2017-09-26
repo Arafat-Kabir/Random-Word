@@ -67,9 +67,9 @@ def selectDict(dictNames):
 
 def currentWord():
     if curword != '':
-        print ' Current Word:',curword
+        print ' Current Word:',curword+'\n'
     else:
-        print " No word selected yet"
+        print " No word selected yet\n"
 
 
 
@@ -85,7 +85,7 @@ def nextWord():
         means = extract(data,'m').split(';')
         sents = extract(data,'s').split('.')
         del wordList[indx]
-        print " What do you understand by '"+curword+"'"
+        print " What do you understand by '"+curword+"'\n"
     else:
         close("No more words left")
 
@@ -116,13 +116,13 @@ def selectWord():
         curword = extract(data,'w')
         means = extract(data,'m').split(';')
         sents = extract(data,'s').split('.')
-        print " What do you understand by '"+curword+"'"
+        print "\n What do you understand by '"+curword+"'\n"
         #remove it from the wordlist
         wordfile = curword.lower()+'.txt'
         if wordfile in wordList:
             wordList.remove(wordfile)
     else:
-        print " No such word in the selected dictionary"
+        print " No such word in the selected dictionary\n"
 
 
 
@@ -135,47 +135,48 @@ def showRemaining():
         if i==4:
             print ''
             i=0
-    print '\n\n Total remaining:',len(wordList),'words'
+    print '\n\n Total remaining:',len(wordList),'words\n'
 
 
 
 def showHint():
     if curword=='':
-        print " No word selected yet"
+        print " No word selected yet\n"
         return
     if len(sents)>0:
-        print ' Hint:',sents.pop(randint(0,len(sents)-1)).strip()
+        print ' Hint:',sents.pop(randint(0,len(sents)-1)).strip()+'\n'
     else:
-        print " No more hints left"
+        print " No more hints left\n"
 
 
 
 def showMeaning():
     if curword=='':
-        print " No word selected yet"
+        print " No word selected yet\n"
         return    
     for m in means:
         print '',m.strip()
+    print ''
 
 
 
 def markHard():   
     #error handling 
     if curword=='':
-        print " No word selected yet"
+        print " No word selected yet\n"
         return         
     if os.path.exists(loc)==False:
-        print " File not found:",loc
+        print " File not found:",loc+'\n'
         return
     dest = loc.replace(dictname,'hard')
     if os.path.exists(dest):
-        print " Word is already marked as hard"
+        print " Word is already marked as hard\n"
         return
     if os.path.exists('hard\\')==False:
         os.mkdir('hard')
     #copy the file
     copyfile(loc, dest)
-    print " '"+curword+"'","added to the 'hard' dictionary"
+    print " '"+curword+"'","added to the 'hard' dictionary\n"
 
 
 
@@ -186,11 +187,11 @@ def unmarkHard():
         return         
     dest = loc.replace(dictname,'hard')
     if os.path.exists(dest)==False:
-        print " '"+curword+"' is not in the 'hard' dictionary"
+        print " '"+curword+"' is not in the 'hard' dictionary\n"
         return
     #delete the file
     os.remove(dest)
-    print " '"+curword+"'","removed from the 'hard' dictionary"
+    print " '"+curword+"'","removed from the 'hard' dictionary\n"
 
 
 
@@ -206,7 +207,8 @@ def printHelp():
     clear:     Clear the screen
     select:    Select a word by typing it
     remaining: Shows the remaining words in the dictionary
-    exit:      exit the program"""
+    exit:      exit the program
+    """
 
 
 
@@ -233,7 +235,7 @@ inp = []
 print ''
 printHelp()
 while True:
-    inp = raw_input("\ncommand> ").split(' ')
+    inp = raw_input("command> ").split(' ')
     inp[0] = inp[0].strip().lower()
     if(inp[0]==''):
         continue
@@ -241,4 +243,4 @@ while True:
         print ""
         cmdList.get(inp[0])()
     else:
-        print " Invalid Command"
+        print " Invalid Command\n"

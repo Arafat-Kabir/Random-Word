@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Metamorphosis
+m: (noun); change of form; an observable change
+s: His metamorphosis from persidential candidate to talk-show host. After the metamorphosis the two-lane highway will become a four-lane highway

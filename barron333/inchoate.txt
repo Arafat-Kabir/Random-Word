@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Inchoate
+m: (adj.); incomplete; elementary; begining to develop; recently began
+s: Because our company just recently opened its doors, we are inchoate and are not offering all of our services yet. If only you could come up with a complete plan and not just inchoate idea!

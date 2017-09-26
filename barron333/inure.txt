@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Inure
+m: (verb); accustom (someone) to something; to become immune to unpleasant events or situations
+s: These children have been inured to violence. Soon the girls became inure to the cruel treatment of their kidnapper and started to think of him as their savior

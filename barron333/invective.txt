@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Invective
+m: (noun); insulting, abusive; abusive language used to criticize; [insult]
+s: The newspaper's invective of the novel made the author angry. This economic crisis is only going to bring about an invective against the government

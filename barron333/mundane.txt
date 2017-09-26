@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Mundane
+m: (adj.); worldly (not heavenly); dull or boring; something regular
+s: The boundaries of the mundane world. From the exciting to the mundane, I will share all of my experiences with you

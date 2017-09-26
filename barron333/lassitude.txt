@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Lassitude
+m: (noun); a state of physical or mental weariness; lack of energy; [tiredness]
+s: After the long race, Jack experienced a feeling of lassitude. This morning, lassitude is preventing me from getting out of bed

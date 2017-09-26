@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Idolatry
+m: (noun); worship of idols; extreme admiration
+s: The prophets railed against idolatry. It is sad how many people exhibit idolatry towards celebrities

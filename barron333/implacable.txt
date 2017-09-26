@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Implacable
+m: (adj.); unable to be placated; not capable of being appeased
+s: The little boy was implacable when his parents left him alone with the babysitter. The students were not happy about their teacher's implacable policy of not accepting late submissions

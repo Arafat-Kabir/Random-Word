@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Misanthrope
+m: (noun); a person who dislikes mankind and avoids human society; he who hates mankind; [hater of mankind]
+s: Living in a crimefilled city will turn anyone into a nervous misanthrope. My aunt is a misanthrope who will not even talk to the members of her own family

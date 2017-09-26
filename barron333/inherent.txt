@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Inherent
+m: (adj.); existing in something as a permanent feature; essential or characteristic attribute; firmly established by nature
+s: I don't think you need a hint for this -_-

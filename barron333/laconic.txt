@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Laconic
+m: (adj.); brief and to the point; using very few words; brief
+s: His laconic reply suggested a lack of interest in the topic. I don't have all day, so be laconic with your answer

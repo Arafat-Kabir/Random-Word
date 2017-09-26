@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Innocuous
+m: (adj.); harmless
+s: It was an innocuous question. Because the virus was innocuous, the hospital staff had no need to worry about the leak

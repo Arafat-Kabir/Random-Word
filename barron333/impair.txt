@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Impair
+m: (verb); weaken or damage something
+s: Alcohol can greatly impair your judgement. Emotions can sometimes impair your ability to reason properly

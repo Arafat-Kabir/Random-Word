@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Mollify
+m: (verb); soothe; appease the anger or anxiety of (someone)
+s: Perhaps a warm glass of milk will mollify my upset stomach. The manager tried to mollify the angry workers by giving them longer breaks

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Iconoclastic
+m: (adj.); attacking cherished traditions; someone who attacks the beliefs, customs and opinions that most people in a society accepts
+s: As an iconoclast, I have no problem attacking your traditional political beliefs. When drunk my uncle becomes iconoclastic who insults the beliefs of others

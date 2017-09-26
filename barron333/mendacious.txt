@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Mendacious
+m: (adj.); lying; no telling the truth; dishonest
+s: Mendacious people hide the truth. Chuck is mendacious about his vegetqarianism because he eats chicken

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Intractable
+m: (adj.); hard to control; not easily managed
+s: Bringing up the sunken cruise ship is going to be an intractable task. As the project grew larger, it became intractable

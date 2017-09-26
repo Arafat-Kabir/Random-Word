@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Itinerary
+m: (noun); plan of a trip; a detailed schedule usually for a trip
+s: The oldstone chapel should be on every visitor's itinerary. The teacher had to submit an itinerary for her field trip

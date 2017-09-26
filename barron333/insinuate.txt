@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Insinuate
+m: (verb); suggest or hint or imply that something negative is true; [imply];; (verb); to insert yourself into a place of favour in a subtle way; [insert]
+s: He insinuated that she lied. Are you trying to insinuate I did not complete my homework on my own?. The bugs insinuated themselves between one's skin and clothes. Even though we dislike Raven, she always manages to insinuate herself into our holiday plans

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Maverick
+m: (noun); non-conformist; independent minded person; tending to choose a different path from everyone; [different than others]
+s: The maverick politician promised to leave behind the ways of the old guards and bring change to the government. My maverick boss has made his fortune by using a selling startegy different from that of his competitors

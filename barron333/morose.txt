@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Morose
+m: (adj.); feeling sad; in a bad mood; [sad]
+s: When her dog died the little girl was morose for months. The funny movie was exactly what I needed to improve my morose mood

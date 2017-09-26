@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Lethargic
+m: (adj.); drowsy; feeling sluggish or lacking energy
+s: I felt tired and lethargic. A dose of chocolate is my favorite when I'm feeling lethargic

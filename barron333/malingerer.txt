@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Malingerer
+m: (noun); one who pretends to be sick to avoid work; [dodger]
+s: The doctor said my son was a malingerer. The lazy student tried to malinger when it was time to work on his essay

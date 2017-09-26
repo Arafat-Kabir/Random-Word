@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Levity
+m: (noun); a lack of seriousness; treatment of a serious matter with humour; [Jokes]
+s: Without some occassional levity, the office is no better than a sweatshop. When I watch movies I prefer films with levity not tearjerkers

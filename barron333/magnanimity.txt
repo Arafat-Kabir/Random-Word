@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Magnanimity
+m: (noun); genorousity
+s: Both sides will have to show magnanimity. Because she was kind and genorous, the magnanimous queen was loved by all

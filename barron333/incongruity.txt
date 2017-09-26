@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Incongruity
+m: (noun); inconsistency or incompatible; out of place
+s: The incongruity of his fleshy face and skinny body disturbed her. Working for a Christian organization as an atheist is incongruous
