@@ -94,7 +94,7 @@ def nextWord():
 def selectWord():
     global curword,means,sents,inp,loc
     word = ''
-    # read second argument a the selected word
+    # read second argument as the selected word
     if len(inp)>1:
         inp[1] = inp[1].strip()
         if inp[1] == '':
@@ -127,12 +127,29 @@ def selectWord():
 
 
 def showRemaining():
+    global inp
     print ' Remaining words in the dictionary are:\n'
+    cols = 4  #default number of columns
+    # read the second argument as the number of columns
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1].startswith('-c'):
+            #print 'starts with -c'
+            inp[1] = inp[1][2:]  #srip off the -c 
+            if inp[1].isdigit():
+                #print 'is digit'
+                inp[1] = int(inp[1])
+                if inp[1]<=10 and inp[1]>0:
+                    #print 'assigned cols =', inp[1]
+                    cols = inp[1]
+        else:
+            word = inp[1]
+    #print the remaining words
     i = 0
     for w in wordList:
         print '   %-15s' %w.replace('.txt',''),
         i += 1
-        if i==4:
+        if i==cols:
             print ''
             i=0
     print '\n\n Total remaining:',len(wordList),'words\n'
