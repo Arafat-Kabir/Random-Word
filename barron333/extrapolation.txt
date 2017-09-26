@@ -1,0 +1,4 @@
+
+w: Extrapolation
+m: (noun); projection; estimation
+s: sizes were estimated by extrapolation

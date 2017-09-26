@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Homogenous
+m: (adj.); of the same kind; alike
+s: As races have mixed, the world's population has become more and more homogenous. As my sister only buys homogenous footwear, most people believe she only has one pair of shoes

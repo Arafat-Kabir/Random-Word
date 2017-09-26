@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Gouge
+m: (noun); a type of blade used in carpentry, sculpture and surgery;; (verb);make a groove with or as if a gouge; overcharge
+s: The channel had been gouged out by ebbiy water. We will gouge it out of him. I have never had anything except a gin bar to gouge it out of

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Gregarious
+m: (adj.); (a person) fond of company; sociable; [friendly]
+s: He was a popular and gregarious man. If you want to be more approachable, show a gregarious smile

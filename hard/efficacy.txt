@@ -1,0 +1,4 @@
+
+w: Efficacy
+m: (noun); the power to produce desired effect; [ability]
+s: The medicine had the efficacy to reduce the pain John was feeling. In order to test the efficacy of its new security system, the bank staged a fake robbery

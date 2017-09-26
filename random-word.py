@@ -71,7 +71,7 @@ def currentWord():
         print ' Current Word:',curword
         print ' Current dict:',dictname
     else:
-        print " No word selected yet\n"
+        print " No word selected yet"
     print ''
 
 
@@ -102,10 +102,12 @@ def selectWord():
         inp[1] = inp[1].strip()
         if inp[1] == '':
             word = raw_input(" Enter the word: ")
+            print ''
         else:
             word = inp[1]
     else:
         word = raw_input(" Enter the word: ")
+        print ''
     #process the input
     word = word.strip().lower()
     if word == '':
@@ -119,7 +121,7 @@ def selectWord():
         curword = extract(data,'w')
         means = extract(data,'m').split(';')
         sents = extract(data,'s').split('.')
-        print "\n What do you understand by '"+curword+"'\n"
+        print " What do you understand by '"+curword+"'\n"
         #remove it from the wordlist
         wordfile = curword.lower()+'.txt'
         if wordfile in wordList:
@@ -214,7 +216,11 @@ def showHint():
         print " No word selected yet\n"
         return
     if len(sents)>0:
-        print ' Hint: ',sents.pop(randint(0,len(sents)-1)).strip()+'\n'
+        temp = sents.pop(randint(0,len(sents)-1)).strip()
+        if temp != '':
+            print ' Hint: ',temp+'\n'
+        else:
+            print ' Sorry?\n'
     else:
         print " No more hints left\n"
 
@@ -305,7 +311,7 @@ inp = []
 print ''
 printHelp()
 while True:
-    inp = raw_input("command> ").split(' ')
+    inp = raw_input("command> ").strip().split(' ')
     inp[0] = inp[0].strip().lower()
     if(inp[0]==''):
         continue

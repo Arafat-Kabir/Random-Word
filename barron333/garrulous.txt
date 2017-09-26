@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Garrulous
+m: (adj.); talkative; loquacious
+s: Because Jake is garrulous, asking him to keep a secret is impossible. Garrulous people make great talk show hosts

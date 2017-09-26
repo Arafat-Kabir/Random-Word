@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Guileless
+m: (adj.); devoid of guile; without deceit; innocent and without deception; [innocent]
+s: The guileless nerd really believed the prom queen had a crush on him. The guileless baby was not afraid of strangers

@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Gainsay
+m: (verb); deny; contradict
+s: The impact of the railroads cannot be gainsaid. The athlete was unable to gainsay his pisitive drug test

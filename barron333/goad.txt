@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Goad
+m: (verb); urge on; provoke or annoy someone so as to stimulate some action or reaction; [khochano, jalaton kora]
+s: He goaded her on to more daring revelations. On the ranch, dogs are used to goad the shee4p into going in the right direction

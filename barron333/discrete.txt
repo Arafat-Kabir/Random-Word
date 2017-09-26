@@ -1,0 +1,4 @@
+
+w: Discrete
+m: (adj.); individually separate and distinct
+s: 

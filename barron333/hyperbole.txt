@@ -1,0 +1,7 @@
+# w for word
+# m for meanings, Separated by ';'
+# s for sentences, Separated by dot(.)
+
+w: Hyperbole
+m: (noun); exaggerate statement not meant to be taken literally; overstatement
+s: Although what I said may sound like hyperbole, it really is the truth. The author used one hyperbole after another to get his across to his his readers
