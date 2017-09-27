@@ -144,7 +144,7 @@ def showRemaining():
             if inp[1].isdigit():
                 #print 'is digit'
                 inp[1] = int(inp[1])
-                if inp[1]<=10 and inp[1]>0:
+                if inp[1]<=15 and inp[1]>0:
                     #print 'assigned cols =', inp[1]
                     cols = inp[1]
         else:
