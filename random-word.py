@@ -162,6 +162,7 @@ def showRemaining():
 
 
 def relateFile():
+    """Scans the meanings field and searches for the matches mentioned in the arguments"""
     global inp;
     cols = 4  #default no of columns
     #process the arguments
@@ -189,6 +190,8 @@ def relateFile():
         #search through the files
         for f in fileList:
             content = open(f).read().lower()
+            content = clean(content)
+            content = extract(content,'m')  #extract the meanings only
             for keyword in inp[1:]:
                 if searchResult.has_key(keyword) == False:
                     searchResult[keyword] = []  #add an empty list
@@ -237,6 +240,7 @@ def showMeaning():
 
 
 def markHard():   
+    """Copies the currenly selected file to the 'hard' dictionary"""
     #error handling 
     if curword=='':
         print " No word selected yet\n"
