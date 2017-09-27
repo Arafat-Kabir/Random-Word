@@ -1,0 +1,4 @@
+
+w: Coagulate
+m: (verb); clot; thicken
+s: Blood has coagulated around the edge of the wound

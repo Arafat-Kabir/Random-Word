@@ -1,0 +1,4 @@
+
+w: Default
+m: (noun/verb); failure to act; failure to fulfill an obligation; to be unsuccessfull at satisfying a commitment; [fail]
+s: Bank will repossess your car if you default on your loan payment. After loosing our job, we are going to default our mortgage payments

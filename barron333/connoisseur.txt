@@ -1,0 +1,4 @@
+
+w: Contention
+m: (noun); a disput between groups or individuals; hatred disaggreement; [conflict]
+s: Does anyone know the point of contention that started the fight between them? . The error was raised due to logic contention 
