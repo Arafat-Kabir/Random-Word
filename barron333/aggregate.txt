@@ -1,0 +1,4 @@
+
+w: Aggregate
+m: (noun/adj./verb); collect; gather
+s: The butterflies aggregate in dense groups (verb). An aggregate score (adj). He won an aggregate of 325

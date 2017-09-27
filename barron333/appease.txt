@@ -1,0 +1,4 @@
+
+w: Appease
+m: (verb); pacify
+s: :* :*
