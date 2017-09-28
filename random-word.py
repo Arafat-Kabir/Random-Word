@@ -261,15 +261,33 @@ def markHard():
 
 
 
+def unmarkHard():
+    #error handling 
+    if curword=='':
+        print " No word selected yet"
+        return         
+    dest = loc.replace(dictname,'hard')
+    if os.path.exists(dest)==False:
+        print " '"+curword+"' is not in the 'hard' dictionary\n"
+        return
+    #delete the file
+    os.remove(dest)
+    print " '"+curword+"'","removed from the 'hard' dictionary\n"
+
+
 
 
 def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
     if os.path.exists('sessions\\')==False:
         os.mkdir('sessions')
+    #error handling 
+    if curword=='':
+        print " No word selected yet\n"
+        return         
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
-    # read second argument as the selected word
+    # read second argument as the selected session name
     if len(inp)>1:
         inp[1] = inp[1].strip()
         if inp[1] == '':
@@ -285,24 +303,32 @@ def sessionSave():
         return
     name += '.session'
     if os.path.exists('sessions\\'+name):
-        print ' Duplicate session name!\n'
-        return
+        #--look for overwrite option--
+        if len(inp)>2:
+            if inp[2].strip().lower() == '-o':
+                print ' Older session will be over-written'
+            else:
+                print ' Duplicate session name!\n'
+                return
+        else:
+            print ' Duplicate session name!\n'
+            return
     #--- record the session data ---
-    data = 'dict:'+dictname+'\n'
+    data = 'dictname:'+dictname+'\n'
     data += 'loc:'+loc+'\n'
-    data += 'word:'+curword+'\n'
+    data += 'curword:'+curword+'\n'
     #record words
-    data += 'mean:'
+    data += 'means:'
     for m in means:
-        data += m+';'
+        data += m.strip()+';'
     data += '\n'
     #record sentences
-    data += 'sent:'
+    data += 'sents:'
     for s in sents:
-        data += s+'.'
+        data += s.strip()+'.'
     data += '\n'
     #record word list
-    data += 'wlist:'
+    data += 'wordList:'
     for w in wordList:
         data += w+';'
     #print data
@@ -313,6 +339,131 @@ def sessionSave():
     print ' Session data saved successfully\n'
 
 
+
+def sessionLoad():
+    """Loads the specified session file"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected session name
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name)==False:
+        print ' No such session exists!'
+        sessionList()
+        return
+    else:
+        if parseSessionData(open('sessions\\'+name).read())==True:
+            print ' Session loaded successfully\n'
+        else:
+            print " Session wasn't loaded!\n"
+
+
+
+def parseSessionData(data):
+    global dictname,loc,curword,means,sents,wordList
+    data = data.split('\n')
+    #print data,'\n'
+    #--load dicname--
+    if data[0].startswith('dictname:'):
+        d = data[0].replace('dictname:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'dict:',d
+    #--load loc--
+    if data[1].startswith('loc:'):
+        lc = data[1].replace('loc:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'loc:',lc
+    #--load curword--
+    if data[2].startswith('curword:'):
+        cw = data[2].replace('curword:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'curword:',cw
+    #--load means--
+    if data[3].startswith('means:'):
+        mn = data[3].replace('means:','').split(';')
+        mn = mn[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'means:',mn
+    #--load sents--
+    if data[4].startswith('sents:'):
+        st = data[4].replace('sents:','').split('.')
+        st = st[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'sents:',st
+    #--load wordList--
+    if data[5].startswith('wordList:'):
+        wl = data[5].replace('wordList:','').split(';')
+        wl = wl[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'wordList:',wl
+    #--Assign global data--
+    dictname = d
+    loc = lc
+    curword = cw
+    means = mn
+    sents = st
+    wordList = wl
+    return True
+
+
+
+
+
+
+def sessionDelete():
+    """Deletes the specified session file"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected session name
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name)==False:
+        print ' No such session exists!'
+        sessionList()
+        return
+    else:
+        os.remove('sessions\\'+name)
+        print ' Session file removed successfully\n'
 
 
 
@@ -325,7 +476,7 @@ def sessionList():
     if(len(lst)<1):
         print " No saved sessions found"
     else:
-        print " Following sessions are available:"
+        print " Available sessions:"
         for l in lst:
             print '   ',l.replace('.session','')
     print ''
@@ -333,19 +484,6 @@ def sessionList():
 
 
 
-
-def unmarkHard():
-    #error handling 
-    if curword=='':
-        print " No word selected yet"
-        return         
-    dest = loc.replace(dictname,'hard')
-    if os.path.exists(dest)==False:
-        print " '"+curword+"' is not in the 'hard' dictionary\n"
-        return
-    #delete the file
-    os.remove(dest)
-    print " '"+curword+"'","removed from the 'hard' dictionary\n"
 
 
 
@@ -378,7 +516,7 @@ dictname = selectDict(dictList)   #selects and specify the selected dictionary
 cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
             'select':selectWord,'relate':relateFile,
-            'session-list':sessionList, 'session-save':sessionSave,
+            'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
             'exit':exit}
 
 print "Selected dictionary:",dictname
