@@ -55,9 +55,14 @@ def selectDict(dictNames):
     for d in dictNames:
         print '\t|--',str(i)+'.',d
         i += 1
-    dselect = raw_input('\nChoose an option [1-'+str(i-1)+']: ')
+    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ')
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
+        if dselect == -1:    #session-load option
+            if sessionLoad()==True:
+                return dictname
+            else:
+                close('Initialization failed')
         if(dselect<len(dictNames)):
             return dictNames[dselect]
         else:
@@ -276,6 +281,8 @@ def unmarkHard():
 
 
 
+#--------- Session Management ---------
+
 
 def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
@@ -368,8 +375,11 @@ def sessionLoad():
     else:
         if parseSessionData(open('sessions\\'+name).read())==True:
             print ' Session loaded successfully\n'
+            return True
         else:
             print " Session wasn't loaded!\n"
+            return False
+
 
 
 
@@ -510,23 +520,29 @@ def clearScreen():
 
 
 #------ Main Program ------
-os.system('cls')
-dictList = loadDictNames()        #loads available dictionary names for selection prompt
-dictname = selectDict(dictList)   #selects and specify the selected dictionary
 cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
             'exit':exit}
-
-print "Selected dictionary:",dictname
-
-wordList = os.listdir(os.getcwd()+'\\'+dictname)
+dictname = ''
 loc = ''
 curword = ''
+wordList = []
 means = []
 sents = []
 inp = []
+
+os.system('cls')
+dictList = loadDictNames()        #loads available dictionary names for selection prompt
+dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
+
+if len(wordList)==0:
+    print "Selected dictionary:",dictname
+    wordList = os.listdir(os.getcwd()+'\\'+dictname)
+else:
+    currentWord()  #a session was loaded, show current status
+
 
 print ''
 printHelp()
