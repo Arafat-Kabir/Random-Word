@@ -510,6 +510,12 @@ def printHelp():
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
+      [ -cxx]: specifies the number of columns to be printed
+    session
+      [-list]: Shows the list of previously saved sessions
+      [-save]: Saves the current session; [-o] to force overwrite
+      [-del ]: Deletes and specified existing session
+      [-load]: Loads an specified existing session
     exit:      exit the program
     """
 
@@ -542,10 +548,9 @@ if len(wordList)==0:
     wordList = os.listdir(os.getcwd()+'\\'+dictname)
 else:
     currentWord()  #a session was loaded, show current status
-
-
 print ''
-printHelp()
+printHelp()  #show help at the beginning
+#--Command processing loop--
 while True:
     inp = raw_input("command> ").strip().split(' ')
     inp[0] = inp[0].strip().lower()
