@@ -59,6 +59,7 @@ def selectDict(dictNames):
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
         if dselect == -1:    #session-load option
+            sessionList()
             if sessionLoad()==True:
                 return dictname
             else:
@@ -283,7 +284,6 @@ def unmarkHard():
 
 #--------- Session Management ---------
 
-
 def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
     if os.path.exists('sessions\\')==False:
@@ -382,7 +382,6 @@ def sessionLoad():
 
 
 
-
 def parseSessionData(data):
     global dictname,loc,curword,means,sents,wordList
     data = data.split('\n')
@@ -443,9 +442,6 @@ def parseSessionData(data):
 
 
 
-
-
-
 def sessionDelete():
     """Deletes the specified session file"""
     if os.path.exists('sessions\\')==False:
@@ -477,7 +473,6 @@ def sessionDelete():
 
 
 
-
 def sessionList():
     """Lists the saved sessions"""
     if os.path.exists('sessions\\')==False:
@@ -490,9 +485,6 @@ def sessionList():
         for l in lst:
             print '   ',l.replace('.session','')
     print ''
-
-
-
 
 
 
@@ -525,7 +517,7 @@ def clearScreen():
     os.system('cls')
 
 
-#------ Main Program ------
+#------------ Main Program ------------
 cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
             'select':selectWord,'relate':relateFile,
@@ -539,6 +531,7 @@ means = []
 sents = []
 inp = []
 
+#--initializations--
 os.system('cls')
 dictList = loadDictNames()        #loads available dictionary names for selection prompt
 dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
@@ -550,6 +543,7 @@ else:
     currentWord()  #a session was loaded, show current status
 print ''
 printHelp()  #show help at the beginning
+
 #--Command processing loop--
 while True:
     inp = raw_input("command> ").strip().split(' ')
