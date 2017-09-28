@@ -51,10 +51,11 @@ def loadDictNames():
 def selectDict(dictNames):
     print "Available Dictionaries:\n\t|"
     i = 1
+    print '\t|--','0. Load a saved session'
     for d in dictNames:
         print '\t|--',str(i)+'.',d
         i += 1
-    dselect = raw_input('\nChoose a Dictionary [1-'+str(i-1)+']: ')
+    dselect = raw_input('\nChoose an option [1-'+str(i-1)+']: ')
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
         if(dselect<len(dictNames)):
@@ -260,6 +261,79 @@ def markHard():
 
 
 
+
+
+def sessionSave():
+    """Writes the session variables value into an external file inside the sessions directory"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected word
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name):
+        print ' Duplicate session name!\n'
+        return
+    #--- record the session data ---
+    data = 'dict:'+dictname+'\n'
+    data += 'loc:'+loc+'\n'
+    data += 'word:'+curword+'\n'
+    #record words
+    data += 'mean:'
+    for m in means:
+        data += m+';'
+    data += '\n'
+    #record sentences
+    data += 'sent:'
+    for s in sents:
+        data += s+'.'
+    data += '\n'
+    #record word list
+    data += 'wlist:'
+    for w in wordList:
+        data += w+';'
+    #print data
+    #save the recorded data
+    f = open('sessions\\'+name,'w')
+    f.write(data)
+    f.close()
+    print ' Session data saved successfully\n'
+
+
+
+
+
+
+def sessionList():
+    """Lists the saved sessions"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    lst = os.listdir(os.getcwd()+'\\sessions')
+    if(len(lst)<1):
+        print " No saved sessions found"
+    else:
+        print " Following sessions are available:"
+        for l in lst:
+            print '   ',l.replace('.session','')
+    print ''
+
+
+
+
+
 def unmarkHard():
     #error handling 
     if curword=='':
@@ -301,7 +375,11 @@ def clearScreen():
 os.system('cls')
 dictList = loadDictNames()        #loads available dictionary names for selection prompt
 dictname = selectDict(dictList)   #selects and specify the selected dictionary
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord,'relate':relateFile, 'exit':exit}
+cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
+            'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
+            'select':selectWord,'relate':relateFile,
+            'session-list':sessionList, 'session-save':sessionSave,
+            'exit':exit}
 
 print "Selected dictionary:",dictname
 
