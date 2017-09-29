@@ -3,5 +3,5 @@
 # s for sentences, Separated by dot(.)
 
 w: Harangue
-m: (noun); a lengthy and agressive speach; tirade; long, passionate speech
+m: (noun); a lengthy and agressive speech; tirade; long, passionate speech
 s: The candidate's speech was nothing but a harangue against his opponent. The comedian does a hilarious harangue about obnoxious celebrities

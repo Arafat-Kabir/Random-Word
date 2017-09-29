@@ -488,6 +488,18 @@ def sessionList():
 
 
 
+def systemCommands():
+    """Executes the system commands"""
+    if len(inp)<2:
+        print " provide the system command to be executed\n"
+        return
+    else:
+        cmd = ' '.join(inp[1:])
+        #print cmd
+        os.system(cmd)
+
+
+
 
 def printHelp():
     print """ Following commands are Available:
@@ -522,7 +534,7 @@ cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMean
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
-            'exit':exit}
+            'system':systemCommands, 'exit':exit}
 dictname = ''
 loc = ''
 curword = ''

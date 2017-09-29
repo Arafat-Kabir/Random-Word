@@ -3,5 +3,5 @@
 # s for sentences, Separated by dot(.)
 
 w: Grandiloquent
-m: (adj.); bombastic; pompous; using high sounding language; [Tasfir Billah]
+m: (adj.); bombastic; pompous; using high sounding language; [Tasrif Billah]
 s: Jack's use of grandiloquent terminology failed to impress the job interviewer. The grandiloquent attorney thought he could persuade any jury with his fancy words
