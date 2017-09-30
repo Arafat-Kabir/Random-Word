@@ -3,5 +3,5 @@
 # s for sentences, Separated by dot(.)
 
 w: Inundate
-m: (verb); overwhelm; flood; submerge; [ucchadito kora]
+m: (verb); overwhelm; flood; submerge; [acchadito kora]
 s: We've been inundated with complaints from listeners. The islands may be the first to be inundated as sea levels rise. If you inundate my husband with questions, he will get very upset

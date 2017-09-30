@@ -138,6 +138,35 @@ def selectWord():
 
 
 
+def showAll():
+    global inp
+    print ' Words in the dictionary are:'
+    cols = 4  #default number of columns
+    # read the second argument as the number of columns
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1].startswith('-c'):
+            #print 'starts with -c'
+            inp[1] = inp[1][2:]  #srip off the -c 
+            if inp[1].isdigit():
+                #print 'is digit'
+                inp[1] = int(inp[1])
+                if inp[1]<=15 and inp[1]>0:
+                    #print 'assigned cols =', inp[1]
+                    cols = inp[1]
+    #print the remaining words
+    lst = os.listdir(os.getcwd()+'\\'+dictname)
+    i = 0
+    for w in lst:
+        print '   %-15s' %w.replace('.txt','').capitalize(),
+        i += 1
+        if i==cols:
+            print ''
+            i=0
+    print '\n\n Total words:',len(lst),'words\n'
+
+
+
 def showRemaining():
     global inp
     print ' Remaining words in the dictionary are:'
@@ -154,8 +183,6 @@ def showRemaining():
                 if inp[1]<=15 and inp[1]>0:
                     #print 'assigned cols =', inp[1]
                     cols = inp[1]
-        else:
-            word = inp[1]
     #print the remaining words
     i = 0
     for w in wordList:
@@ -515,14 +542,13 @@ def printHelp():
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
+    all:       Shows all the words in the dictionary
       [ -cxx]: specifies the number of columns to be printed
-
     session
       [-list]: Shows the list of previously saved sessions
       [-save]: Saves the current session; [-o] to force overwrite
       [-del ]: Deletes and specified existing session
       [-load]: Loads an specified existing session
-
     system:    invoke a system command
     exit:      exit the program
     """
@@ -545,7 +571,7 @@ intro = """\
 -----------------------------------------
 """
 cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
-            'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
+            'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
             'system':systemCommands, 'exit':exit}
