@@ -497,6 +497,7 @@ def systemCommands():
         cmd = ' '.join(inp[1:])
         #print cmd
         os.system(cmd)
+        print ''
 
 
 
@@ -515,11 +516,14 @@ def printHelp():
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
       [ -cxx]: specifies the number of columns to be printed
+
     session
       [-list]: Shows the list of previously saved sessions
       [-save]: Saves the current session; [-o] to force overwrite
       [-del ]: Deletes and specified existing session
       [-load]: Loads an specified existing session
+
+    system:    invoke a system command
     exit:      exit the program
     """
 
@@ -529,7 +533,17 @@ def clearScreen():
     os.system('cls')
 
 
+
+
 #------------ Main Program ------------
+intro = """\
+-----------------------------------------
+|                                       |
+|    Python Script for word practice    |
+|    Coded by: Md. Arafat Kabir Sun     |
+|                                       |
+-----------------------------------------
+"""
 cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 
             'select':selectWord,'relate':relateFile,
@@ -545,6 +559,7 @@ inp = []
 
 #--initializations--
 os.system('cls')
+print intro
 dictList = loadDictNames()        #loads available dictionary names for selection prompt
 dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
 
@@ -558,7 +573,7 @@ printHelp()  #show help at the beginning
 
 #--Command processing loop--
 while True:
-    inp = raw_input("command> ").strip().split(' ')
+    inp = raw_input("command> ").strip().split()
     inp[0] = inp[0].strip().lower()
     if(inp[0]==''):
         continue
