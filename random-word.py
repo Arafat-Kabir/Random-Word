@@ -135,6 +135,7 @@ def selectWord():
             wordList.remove(wordfile)
     else:
         print " No such word in the selected dictionary\n"
+	#end of selectWord()
 
 
 
@@ -245,7 +246,7 @@ def relateFile():
                     i = 0
                     print ''
             print '\n'
-
+	#end of relateFile()
 
 
 def showHint():
@@ -260,6 +261,7 @@ def showHint():
             print ' Sorry?\n'
     else:
         print " No more hints left\n"
+	#end of showHint()
 
 
 
