@@ -542,6 +542,7 @@ def printHelp():
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
+      [ -cxx]: specifies the number of columns to be printed
     all:       Shows all the words in the dictionary
       [ -cxx]: specifies the number of columns to be printed
     session
