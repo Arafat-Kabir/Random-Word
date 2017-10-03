@@ -1,8 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Placate
-m: (verb); appease or pacify; make someone less angry
-
-s: They attempted to placate the students by promises. I tried to placate the sad little boy by giving him a cookie

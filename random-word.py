@@ -51,12 +51,19 @@ def loadDictNames():
 def selectDict(dictNames):
     print "Available Dictionaries:\n\t|"
     i = 1
+    print '\t|--','0. Load a saved session'
     for d in dictNames:
         print '\t|--',str(i)+'.',d
         i += 1
-    dselect = raw_input('\nChoose a Dictionary [1-'+str(i-1)+']: ')
+    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ')
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
+        if dselect == -1:    #session-load option
+            sessionList()
+            if sessionLoad()==True:
+                return dictname
+            else:
+                close('Initialization failed')
         if(dselect<len(dictNames)):
             return dictNames[dselect]
         else:
@@ -132,6 +139,35 @@ def selectWord():
 
 
 
+def showAll():
+    global inp
+    print ' Words in the dictionary are:'
+    cols = 4  #default number of columns
+    # read the second argument as the number of columns
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1].startswith('-c'):
+            #print 'starts with -c'
+            inp[1] = inp[1][2:]  #srip off the -c 
+            if inp[1].isdigit():
+                #print 'is digit'
+                inp[1] = int(inp[1])
+                if inp[1]<=15 and inp[1]>0:
+                    #print 'assigned cols =', inp[1]
+                    cols = inp[1]
+    #print the remaining words
+    lst = os.listdir(os.getcwd()+'\\'+dictname)
+    i = 0
+    for w in lst:
+        print '   %-15s' %w.replace('.txt','').capitalize(),
+        i += 1
+        if i==cols:
+            print ''
+            i=0
+    print '\n\n Total words:',len(lst),'words\n'
+
+
+
 def showRemaining():
     global inp
     print ' Remaining words in the dictionary are:'
@@ -148,8 +184,6 @@ def showRemaining():
                 if inp[1]<=15 and inp[1]>0:
                     #print 'assigned cols =', inp[1]
                     cols = inp[1]
-        else:
-            word = inp[1]
     #print the remaining words
     i = 0
     for w in wordList:
@@ -277,6 +311,226 @@ def unmarkHard():
 
 
 
+#--------- Session Management ---------
+
+def sessionSave():
+    """Writes the session variables value into an external file inside the sessions directory"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #error handling 
+    if curword=='':
+        print " No word selected yet\n"
+        return         
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected session name
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name):
+        #--look for overwrite option--
+        if len(inp)>2:
+            if inp[2].strip().lower() == '-o':
+                print ' Older session will be over-written'
+            else:
+                print ' Duplicate session name!\n'
+                return
+        else:
+            print ' Duplicate session name!\n'
+            return
+    #--- record the session data ---
+    data = 'dictname:'+dictname+'\n'
+    data += 'loc:'+loc+'\n'
+    data += 'curword:'+curword+'\n'
+    #record words
+    data += 'means:'
+    for m in means:
+        data += m.strip()+';'
+    data += '\n'
+    #record sentences
+    data += 'sents:'
+    for s in sents:
+        data += s.strip()+'.'
+    data += '\n'
+    #record word list
+    data += 'wordList:'
+    for w in wordList:
+        data += w+';'
+    #print data
+    #save the recorded data
+    f = open('sessions\\'+name,'w')
+    f.write(data)
+    f.close()
+    print ' Session data saved successfully\n'
+
+
+
+def sessionLoad():
+    """Loads the specified session file"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected session name
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name)==False:
+        print ' No such session exists!'
+        sessionList()
+        return
+    else:
+        if parseSessionData(open('sessions\\'+name).read())==True:
+            print ' Session loaded successfully\n'
+            return True
+        else:
+            print " Session wasn't loaded!\n"
+            return False
+
+
+
+def parseSessionData(data):
+    global dictname,loc,curword,means,sents,wordList
+    data = data.split('\n')
+    #print data,'\n'
+    #--load dicname--
+    if data[0].startswith('dictname:'):
+        d = data[0].replace('dictname:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'dict:',d
+    #--load loc--
+    if data[1].startswith('loc:'):
+        lc = data[1].replace('loc:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'loc:',lc
+    #--load curword--
+    if data[2].startswith('curword:'):
+        cw = data[2].replace('curword:','')
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'curword:',cw
+    #--load means--
+    if data[3].startswith('means:'):
+        mn = data[3].replace('means:','').split(';')
+        mn = mn[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'means:',mn
+    #--load sents--
+    if data[4].startswith('sents:'):
+        st = data[4].replace('sents:','').split('.')
+        st = st[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'sents:',st
+    #--load wordList--
+    if data[5].startswith('wordList:'):
+        wl = data[5].replace('wordList:','').split(';')
+        wl = wl[0:-1]  #there is a blank at the end
+    else:
+        print ' Session file corrupted'
+        return False
+    #print 'wordList:',wl
+    #--Assign global data--
+    dictname = d
+    loc = lc
+    curword = cw
+    means = mn
+    sents = st
+    wordList = wl
+    return True
+
+
+
+def sessionDelete():
+    """Deletes the specified session file"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
+    name = ''
+    # read second argument as the selected session name
+    if len(inp)>1:
+        inp[1] = inp[1].strip()
+        if inp[1] == '':
+            name = raw_input(" Enter the session-name: ")
+        else:
+            name = inp[1]
+    else:
+        name = raw_input(" Enter the session-name: ")
+    #check for error names
+    name = name.strip()
+    if name == '':
+        print ''
+        return
+    name += '.session'
+    if os.path.exists('sessions\\'+name)==False:
+        print ' No such session exists!'
+        sessionList()
+        return
+    else:
+        os.remove('sessions\\'+name)
+        print ' Session file removed successfully\n'
+
+
+
+def sessionList():
+    """Lists the saved sessions"""
+    if os.path.exists('sessions\\')==False:
+        os.mkdir('sessions')
+    lst = os.listdir(os.getcwd()+'\\sessions')
+    if(len(lst)<1):
+        print " No saved sessions found"
+    else:
+        print " Available sessions:"
+        for l in lst:
+            print '   ',l.replace('.session','')
+    print ''
+
+
+
+def systemCommands():
+    """Executes the system commands"""
+    if len(inp)<2:
+        print " provide the system command to be executed\n"
+        return
+    else:
+        cmd = ' '.join(inp[1:])
+        #print cmd
+        os.system(cmd)
+        print ''
+
+
+
+
 def printHelp():
     print """ Following commands are Available:
     help:      prints this help message
@@ -290,6 +544,14 @@ def printHelp():
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
+    all:       Shows all the words in the dictionary
+      [ -cxx]: specifies the number of columns to be printed
+    session
+      [-list]: Shows the list of previously saved sessions
+      [-save]: Saves the current session; [-o] to force overwrite
+      [-del ]: Deletes and specified existing session
+      [-load]: Loads an specified existing session
+    system:    invoke a system command
     exit:      exit the program
     """
 
@@ -299,25 +561,47 @@ def clearScreen():
     os.system('cls')
 
 
-#------ Main Program ------
-os.system('cls')
-dictList = loadDictNames()        #loads available dictionary names for selection prompt
-dictname = selectDict(dictList)   #selects and specify the selected dictionary
-cmdList = {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'select':selectWord,'relate':relateFile, 'exit':exit}
 
-print "Selected dictionary:",dictname
 
-wordList = os.listdir(os.getcwd()+'\\'+dictname)
+#------------ Main Program ------------
+intro = """\
+-----------------------------------------
+|                                       |
+|    Python Script for word practice    |
+|    Coded by: Md. Arafat Kabir Sun     |
+|                                       |
+-----------------------------------------
+"""
+cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
+            'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
+            'select':selectWord,'relate':relateFile,
+            'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
+            'system':systemCommands, 'exit':exit}
+dictname = ''
 loc = ''
 curword = ''
+wordList = []
 means = []
 sents = []
 inp = []
 
+#--initializations--
+os.system('cls')
+print intro
+dictList = loadDictNames()        #loads available dictionary names for selection prompt
+dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
+
+if len(wordList)==0:
+    print "Selected dictionary:",dictname
+    wordList = os.listdir(os.getcwd()+'\\'+dictname)
+else:
+    currentWord()  #a session was loaded, show current status
 print ''
-printHelp()
+printHelp()  #show help at the beginning
+
+#--Command processing loop--
 while True:
-    inp = raw_input("command> ").strip().split(' ')
+    inp = raw_input("command> ").strip().split()
     inp[0] = inp[0].strip().lower()
     if(inp[0]==''):
         continue
