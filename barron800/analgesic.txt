@@ -1,4 +1,4 @@
 
-w: Anulgesic
+w: Analgesic
 m: (noun); medication that reduces or eliminates pain ; [pain killer]
-s: Acetaminopher is a fairly weak analgesic. The investigate the analgesic effect of the medicine they conducted an axperiment 
+s: Acetaminopher is a fairly weak analgesic. To investigate the analgesic effect of the medicine they conducted an axperiment 

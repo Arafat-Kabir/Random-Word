@@ -603,6 +603,8 @@ printHelp()  #show help at the beginning
 #--Command processing loop--
 while True:
     inp = raw_input("command> ").strip().split()
+    if len(inp)<=0:
+        continue
     inp[0] = inp[0].strip().lower()
     if(inp[0]==''):
         continue

@@ -1,4 +1,4 @@
 
 w: Abjure
-m: (verb); to reject; abandon firmly; to give up a bekief or activity 
-s: no hint
+m: (verb); to reject; abandon formally; to give up a belief or activity 
+s: Apart from my religious belief, I abjure meat and only eat vegetables
