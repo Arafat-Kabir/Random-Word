@@ -1,0 +1,4 @@
+
+w: Bard
+m: (noun); poet
+s: I can be a bard, a philosopher or an actor. He was the bard of the boulevard
