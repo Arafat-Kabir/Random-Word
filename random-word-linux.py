@@ -559,7 +559,7 @@ def printHelp():
 
 
 def clearScreen():
-    os.system('cls')
+    os.system('clear')
 
 
 
