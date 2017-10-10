@@ -88,7 +88,7 @@ def nextWord():
     wleft = len(wordList)
     if wleft>0:
         indx = randint(0,wleft-1)
-        loc = dictname+'\\'+wordList[indx]
+        loc = dictname+'/'+wordList[indx]
         txt = open(loc).read()
         data = clean(txt)
         curword = extract(data,'w')
@@ -119,7 +119,7 @@ def selectWord():
     word = word.strip().lower()
     if word == '':
         return        
-    word = dictname+'\\'+word+'.txt'
+    word = dictname+'/'+word+'.txt'
     #read the word from file
     if os.path.exists(word):
         loc = word
@@ -156,7 +156,7 @@ def showAll():
                     #print 'assigned cols =', inp[1]
                     cols = inp[1]
     #print the remaining words
-    lst = os.listdir(os.getcwd()+'\\'+dictname)
+    lst = os.listdir(os.getcwd()+'/'+dictname)
     i = 0
     for w in lst:
         print '   %-15s' %w.replace('.txt','').capitalize(),
@@ -220,7 +220,7 @@ def relateFile():
     if len(inp)<2:
         print " Enter keywords to search\n"
     else:
-        fileList = glob(dictname+'\\*')   #load files list
+        fileList = glob(dictname+'/*')   #load files list
         searchResult = {}
         #search through the files
         for f in fileList:
@@ -288,7 +288,7 @@ def markHard():
     if os.path.exists(dest):
         print " Word is already marked as hard\n"
         return
-    if os.path.exists('hard\\')==False:
+    if os.path.exists('hard//')==False:
         os.mkdir('hard')
     #copy the file
     copyfile(loc, dest)
@@ -315,7 +315,7 @@ def unmarkHard():
 
 def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
     #error handling 
     if curword=='':
@@ -338,7 +338,7 @@ def sessionSave():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name):
+    if os.path.exists('sessions/'+name):
         #--look for overwrite option--
         if len(inp)>2:
             if inp[2].strip().lower() == '-o':
@@ -369,7 +369,7 @@ def sessionSave():
         data += w+';'
     #print data
     #save the recorded data
-    f = open('sessions\\'+name,'w')
+    f = open('sessions/'+name,'w')
     f.write(data)
     f.close()
     print ' Session data saved successfully\n'
@@ -378,7 +378,7 @@ def sessionSave():
 
 def sessionLoad():
     """Loads the specified session file"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
@@ -397,12 +397,12 @@ def sessionLoad():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name)==False:
+    if os.path.exists('sessions/'+name)==False:
         print ' No such session exists!'
         sessionList()
         return
     else:
-        if parseSessionData(open('sessions\\'+name).read())==True:
+        if parseSessionData(open('sessions/'+name).read())==True:
             print ' Session loaded successfully\n'
             return True
         else:
@@ -473,7 +473,7 @@ def parseSessionData(data):
 
 def sessionDelete():
     """Deletes the specified session file"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
@@ -492,21 +492,21 @@ def sessionDelete():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name)==False:
+    if os.path.exists('sessions/'+name)==False:
         print ' No such session exists!'
         sessionList()
         return
     else:
-        os.remove('sessions\\'+name)
+        os.remove('sessions/'+name)
         print ' Session file removed successfully\n'
 
 
 
 def sessionList():
     """Lists the saved sessions"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
-    lst = os.listdir(os.getcwd()+'\\sessions')
+    lst = os.listdir(os.getcwd()+'/sessions')
     if(len(lst)<1):
         print " No saved sessions found"
     else:
@@ -594,7 +594,7 @@ dictname = selectDict(dictList)   #selects and specify the selected dictionary, 
 
 if len(wordList)==0:
     print "Selected dictionary:",dictname
-    wordList = os.listdir(os.getcwd()+'\\'+dictname)
+    wordList = os.listdir(os.getcwd()+'/'+dictname)
 else:
     currentWord()  #a session was loaded, show current status
 print ''
