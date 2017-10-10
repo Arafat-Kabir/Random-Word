@@ -587,7 +587,7 @@ sents = []
 inp = []
 
 #--initializations--
-os.system('cls')
+os.system('clear')
 print intro
 dictList = loadDictNames()        #loads available dictionary names for selection prompt
 dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
