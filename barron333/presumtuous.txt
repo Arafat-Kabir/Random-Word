@@ -1,8 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Presumptuous
-m: (adj.); arrogant; taking liberties; (the behavior) failing to observe the limits of what is appropriate; making a judgement without knowing all facts
-
-s: It was rather presumptuous of her to assume I would get her a birthday present. Is it presumptuous to believe the world will end on a certain day!

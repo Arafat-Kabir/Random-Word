@@ -75,8 +75,9 @@ def selectDict(dictNames):
 
 def currentWord():
     if curword != '':
-        print ' Current Word:',curword
-        print ' Current dict:',dictname
+        print ' Current Word :',curword
+        print ' Current dict :',dictname
+        print ' File location:',loc
     else:
         print " No word selected yet"
     print ''
