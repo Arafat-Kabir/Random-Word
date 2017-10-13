@@ -1,0 +1,4 @@
+
+w: Categorical
+m: (adj.); absolute; unambiguously explicit; stated in a definite manner
+s: My father's categorical denial means he won't agree, no matter what I say. When she asked her father for a new car, she received a categorical no in response
