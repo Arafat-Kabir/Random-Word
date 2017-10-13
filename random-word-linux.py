@@ -226,7 +226,9 @@ def relateFile():
         for f in fileList:
             content = open(f).read().lower()
             content = clean(content)
-            content = extract(content,'m')  #extract the meanings only
+            temp1 = extract(content,'m')  #extract the meanings only
+            temp2 = extract(content,'w')  #extract the meanings only
+            content = temp2 + ' ' + temp1
             for keyword in inp[1:]:
                 if searchResult.has_key(keyword) == False:
                     searchResult[keyword] = []  #add an empty list
