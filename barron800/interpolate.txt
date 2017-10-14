@@ -1,0 +1,3 @@
+w: Interpolate
+m: (verb); insert; change somethig by adding new material to it
+s: Illustrations were Interpolated in the text. Many singers Interpolate their own words and music into classic songs in order to create new tunes

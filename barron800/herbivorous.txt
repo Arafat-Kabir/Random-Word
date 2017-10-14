@@ -1,0 +1,3 @@
+w: Herbivorous
+m: (noun); an animal that eats plants
+s: :P
