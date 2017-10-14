@@ -55,7 +55,7 @@ def selectDict(dictNames):
     for d in dictNames:
         print '\t|--',str(i)+'.',d
         i += 1
-    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ')
+    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ').strip()
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
         if dselect == -1:    #session-load option

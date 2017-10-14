@@ -1,0 +1,3 @@
+w: Demographic
+m: (adj.); related to population
+s: The demographic trend is towards an older population
