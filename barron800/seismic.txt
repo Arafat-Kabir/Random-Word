@@ -1,0 +1,3 @@
+w: seismic
+m: (adj.); caused or related to earthquake
+s: seismic tests were conducted to determine the force of the earthquake

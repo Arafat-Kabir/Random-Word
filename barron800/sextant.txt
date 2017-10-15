@@ -1,0 +1,3 @@
+w: sextant
+m: (noun); a navigation tool; a device to determine latitude and longitude
+s: 

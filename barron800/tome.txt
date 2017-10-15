@@ -1,0 +1,3 @@
+w: Tome
+m: (noun); book, usually large, heavy and scholarly one
+s: He expects us to read this tome by monday

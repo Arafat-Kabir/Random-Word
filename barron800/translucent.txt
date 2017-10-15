@@ -1,0 +1,3 @@
+w: Translucent
+m: (noun); partially transparent
+s: :P

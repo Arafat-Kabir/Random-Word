@@ -1,0 +1,3 @@
+w: Tautology
+m: (noun); unnecessary repetition; restate unnecessarily
+s: Avoid such tautology as "Let's all work together, everyone as a team" by simply saying "Let's work together"
