@@ -144,7 +144,8 @@ def showAll():
     global inp
     print ' Words in the dictionary are:'
     cols = 4  #default number of columns
-    # read the second argument as the number of columns
+    classify = False
+    # read the rest arguments 
     if len(inp)>1:
         inp[1] = inp[1].strip()
         if inp[1].startswith('-c'):
@@ -156,11 +157,29 @@ def showAll():
                 if inp[1]<=15 and inp[1]>0:
                     #print 'assigned cols =', inp[1]
                     cols = inp[1]
-    #print the remaining words
+        elif inp[1] == '--classify':
+            classify = True
+        #check for letterwise classification
+        if len(inp)>2:
+            inp[2] = inp[2].strip()
+            if inp[2] == '--classify':
+                classify = True
+    #print the words
     lst = os.listdir(os.getcwd()+'\\'+dictname)
     i = 0
+    first = ''
     for w in lst:
-        print '   %-15s' %w.replace('.txt','').capitalize(),
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #Print the word
+        print '   %-15s' %w,
         i += 1
         if i==cols:
             print ''
