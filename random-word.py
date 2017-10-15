@@ -187,22 +187,36 @@ def showRemaining():
     global inp
     print ' Remaining words in the dictionary are:'
     cols = 4  #default number of columns
-    # read the second argument as the number of columns
-    if len(inp)>1:
-        inp[1] = inp[1].strip()
-        if inp[1].startswith('-c'):
+    classify = False
+    # read the rest arguments 
+    for i in range(1,len(inp)):
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[1] = inp[1][2:]  #srip off the -c 
-            if inp[1].isdigit():
+            inp[i] = inp[i][2:]  #srip off the -c 
+            if inp[i].isdigit():
                 #print 'is digit'
-                inp[1] = int(inp[1])
-                if inp[1]<=15 and inp[1]>0:
+                inp[i] = int(inp[i])
+                if inp[i]<=15 and inp[i]>0:
                     #print 'assigned cols =', inp[1]
-                    cols = inp[1]
+                    cols = inp[i]
+        elif inp[i] == '--classify':
+            classify = True
     #print the remaining words
     i = 0
-    for w in wordList:
-        print '   %-15s' %w.replace('.txt','').capitalize(),
+    first = ''
+    for w in wordList:        
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #print the word
+        print '   %-15s' %w,
         i += 1
         if i==cols:
             print ''
