@@ -564,25 +564,59 @@ def systemCommands():
 
 def printHelp():
     print """ Following commands are Available:
-    help:      prints this help message
+    help:      Prints this help message
+    next:      Select a new word randomly
+    hint:      Shows a sentence using the current word
+    reveal:    Reveals the meanings of current word
+    this:      Shows selected word and dictionary name
+    mark-hard: Copies the current word into the 'hard' dictionary
+    not-hard:  Removes the current word from the 'hard' dictionary
+    clear:     Clear the screen
+    select:    Select a word by typing it
+    relate:    Relates specified keywords with the dictionary words
+
+    remaining: Shows the remaining words in the dictionary
+      [ -cxx]     : Specifies the number of columns to be printed
+      [--classify]: Classify the words by the first letter
+
+    all:       Shows all the words in the dictionary
+      [ -cxx]     : Specifies the number of columns to be printed
+      [--classify]: Classify the words by the first letter
+
+    session  : Session management command prefix: session-list etc.
+      <-list>: Shows the list of previously saved sessions
+      <-save>: Saves the current session; [-o] to force overwrite
+               [name] : Specify session name
+               [-o]   : Force overwrite existing session file
+      <-del >: Deletes and specified existing session
+      <-load>: Loads an specified existing session
+
+    system:    invoke a system command
+    exit:      exit the program
+
+    --------------------------------------------------------
+    
+    P.S: All commands are case-insensitive 
+         [xx] means optional arguments separated by spaces 
+         <xx> compulsory postfix without spaces         
+    """
+
+
+def shortHelp():
+    print """ Following commands are Available:
+    help:      Prints a detailed help message
     next:      select a new word randomly
     hint:      shows a sentence using the current word
     reveal:    reveals the meanings of current word
-    this:      shows select word and dictionary name
+    this:      Shows selected word and dictionary name
     mark-hard: Copies the current word into the 'hard' dictionary
     not-hard:  Removes the current word from the 'hard' dictionary
     clear:     Clear the screen
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
-      [ -cxx]: specifies the number of columns to be printed
     all:       Shows all the words in the dictionary
-      [ -cxx]: specifies the number of columns to be printed
-    session
-      [-list]: Shows the list of previously saved sessions
-      [-save]: Saves the current session; [-o] to force overwrite
-      [-del ]: Deletes and specified existing session
-      [-load]: Loads an specified existing session
+    session:   Session-management prefix. [Type 'Help' for details]
     system:    invoke a system command
     exit:      exit the program
     """
@@ -629,7 +663,7 @@ if len(wordList)==0:
 else:
     currentWord()  #a session was loaded, show current status
 print ''
-printHelp()  #show help at the beginning
+shortHelp()  #show help at the beginning
 
 #--Command processing loop--
 while True:
