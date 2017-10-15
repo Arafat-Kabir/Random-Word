@@ -142,7 +142,7 @@ def selectWord():
 
 def showAll():
     global inp
-    print ' Words in the dictionary are:'
+    print ' Words in the dictionary are:',
     cols = 4  #default number of columns
     classify = False
     # read the rest arguments 
@@ -185,7 +185,7 @@ def showAll():
 
 def showRemaining():
     global inp
-    print ' Remaining words in the dictionary are:'
+    print ' Remaining words in the dictionary are:',
     cols = 4  #default number of columns
     classify = False
     # read the rest arguments 
