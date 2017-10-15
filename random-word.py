@@ -15,7 +15,7 @@ def clean(text):
         if temp == '' or temp.startswith('#'):
             del lines[i]
         else:
-            lines[i] = temp    
+            lines[i] = temp
 
     return lines
 
@@ -119,7 +119,7 @@ def selectWord():
     #process the input
     word = word.strip().lower()
     if word == '':
-        return        
+        return
     word = dictname+'\\'+word+'.txt'
     #read the word from file
     if os.path.exists(word):
@@ -145,12 +145,12 @@ def showAll():
     print ' Words in the dictionary are:',
     cols = 4  #default number of columns
     classify = False
-    # read the rest arguments 
+    # read the rest arguments
     for i in range(1,len(inp)):
         inp[i] = inp[i].strip()
         if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[i] = inp[i][2:]  #srip off the -c 
+            inp[i] = inp[i][2:]  #srip off the -c
             if inp[i].isdigit():
                 #print 'is digit'
                 inp[i] = int(inp[i])
@@ -188,12 +188,12 @@ def showRemaining():
     print ' Remaining words in the dictionary are:',
     cols = 4  #default number of columns
     classify = False
-    # read the rest arguments 
+    # read the rest arguments
     for i in range(1,len(inp)):
         inp[i] = inp[i].strip()
         if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[i] = inp[i][2:]  #srip off the -c 
+            inp[i] = inp[i][2:]  #srip off the -c
             if inp[i].isdigit():
                 #print 'is digit'
                 inp[i] = int(inp[i])
@@ -205,7 +205,7 @@ def showRemaining():
     #print the remaining words
     i = 0
     first = ''
-    for w in wordList:        
+    for w in wordList:
         w = w.replace('.txt','').capitalize()
         #classify according to first letter
         if classify:
@@ -237,7 +237,7 @@ def relateFile():
             del inp[i]
         elif inp[i].startswith('-c'):   #set the column number
             #print 'starts with -c'
-            inp[i] = inp[i][2:]  #srip off the -c 
+            inp[i] = inp[i][2:]  #srip off the -c
             if inp[i].isdigit():
                 #print 'is digit'
                 inp[i] = int(inp[i])
@@ -299,19 +299,19 @@ def showHint():
 def showMeaning():
     if curword=='':
         print " No word selected yet\n"
-        return    
+        return
     for m in means:
         print '',m.strip()
     print ''
 
 
 
-def markHard():   
+def markHard():
     """Copies the currenly selected file to the 'hard' dictionary"""
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet\n"
-        return         
+        return
     if os.path.exists(loc)==False:
         print " File not found:",loc+'\n'
         return
@@ -328,10 +328,10 @@ def markHard():
 
 
 def unmarkHard():
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet"
-        return         
+        return
     dest = loc.replace(dictname,'hard')
     if os.path.exists(dest)==False:
         print " '"+curword+"' is not in the 'hard' dictionary\n"
@@ -348,10 +348,10 @@ def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
     if os.path.exists('sessions\\')==False:
         os.mkdir('sessions')
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet\n"
-        return         
+        return
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
     # read second argument as the selected session name
@@ -595,10 +595,10 @@ def printHelp():
     exit:      exit the program
 
     --------------------------------------------------------
-    
-    P.S: All commands are case-insensitive 
-         [xx] means optional arguments separated by spaces 
-         <xx> compulsory postfix without spaces         
+
+    P.S: All commands are case-insensitive
+         [xx] means optional arguments separated by spaces
+         <xx> compulsory postfix without spaces
     """
 
 
@@ -638,7 +638,7 @@ intro = """\
 |                                       |
 -----------------------------------------
 """
-cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
+cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord,
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
