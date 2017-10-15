@@ -146,24 +146,19 @@ def showAll():
     cols = 4  #default number of columns
     classify = False
     # read the rest arguments 
-    if len(inp)>1:
-        inp[1] = inp[1].strip()
-        if inp[1].startswith('-c'):
+    for i in range(1,len(inp)):
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[1] = inp[1][2:]  #srip off the -c 
-            if inp[1].isdigit():
+            inp[i] = inp[i][2:]  #srip off the -c 
+            if inp[i].isdigit():
                 #print 'is digit'
-                inp[1] = int(inp[1])
-                if inp[1]<=15 and inp[1]>0:
+                inp[i] = int(inp[i])
+                if inp[i]<=15 and inp[i]>0:
                     #print 'assigned cols =', inp[1]
-                    cols = inp[1]
-        elif inp[1] == '--classify':
+                    cols = inp[i]
+        elif inp[i] == '--classify':
             classify = True
-        #check for letterwise classification
-        if len(inp)>2:
-            inp[2] = inp[2].strip()
-            if inp[2] == '--classify':
-                classify = True
     #print the words
     lst = os.listdir(os.getcwd()+'\\'+dictname)
     i = 0
