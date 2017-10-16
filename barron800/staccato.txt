@@ -1,3 +1,3 @@
-w: staccato
-m: (adv./adj.), marked by abrupt, clear cut sound; associatd with brief disconnected sound
+w: Staccato
+m: (adv./adj.); marked by abrupt, clear cut sound; associatd with brief disconnected sound
 s: When the police entered the home the heared the staccato sound of a gun

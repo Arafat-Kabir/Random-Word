@@ -1,3 +1,3 @@
-w: sidereal
+w: Sidereal
 m: (adj.); relating to a stars
 s: Eash sidereal year is measured by looking at the position of the sun relative to the stars

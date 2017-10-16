@@ -1,3 +1,3 @@
-w: squalor
-m: (noun), filthy; poor and dirty condition
+w: Squalor
+m: (noun); filthy; poor and dirty condition
 s: They lived in squalor and diseases
