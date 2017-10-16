@@ -1,0 +1,3 @@
+w: Quorum
+m: (noun); the minimum number of members necessary to be present to make a proceeding or a meeting
+s: The meeting got cancelled since a quorum was not formed

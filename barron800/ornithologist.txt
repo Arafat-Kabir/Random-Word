@@ -1,0 +1,3 @@
+w: Ornithologist
+m: (noun); scientist who studies birds
+s: Forensic ornithologist Jack examines bird skeleton
