@@ -224,6 +224,105 @@ def showRemaining():
     print '\n\n Total remaining:',len(wordList),'words\n'
 
 
+#------------- Subset operations ----------------
+def showSubset():
+    global inp
+    cols = 4  #default number of columns
+    classify = False
+    # read the display options
+    indx = range(len(inp))[1:]
+    indx.reverse()
+    for i in indx:
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
+            #print 'starts with -c'
+            temp = inp[i][2:]  #srip off the -c
+            if temp.isdigit():
+                #print 'is digit'
+                temp = int(temp)
+                if temp<=15 and temp>0:
+                    #print 'assigned cols =', inp[1]
+                    cols = temp
+                    del inp[i]
+        elif inp[i] == '--classify':
+            classify = True
+            del inp[i]
+    #extract subset select keys
+    keys = inp[1:]
+    if len(keys)<=0:
+        print ' Provide some valid keys\n'
+        return
+    for k in keys:
+        k = k.lower()
+    #print the words in the subset
+    print ' Words in the subset are:'
+    cnt = 0
+    i = 0
+    first = ''
+    for w in wordList:
+        inset = False
+        for k in keys:
+            if w.startswith(k):
+                inset = True
+        if inset == False:
+            continue
+        cnt += 1
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #print the word
+        print '   %-15s' %w,
+        i += 1
+        if i==cols:
+            print ''
+            i=0
+    if cnt <=0:
+        print ' --- No word belongs to your subset ---\n'
+    else:
+        print '\n\n Subset contains:',cnt,'words\n'
+
+
+
+def selectSubset():
+    global inp
+    #extract subset select keys
+    keys = inp[1:]
+    if len(keys)<=0:
+        print ' Provide some valid keys\n'
+        return
+    #print the keys
+    print ' Subset selection keys:'
+    for k in keys:
+        k = k.lower()   #convert keys into lowercase
+        print '               ',k.upper()  #show in uppercase
+    #discard non-matching words
+    cnt = 0
+    indx = range(len(wordList))
+    indx.reverse()  #take a reverse approach
+    for i in indx:
+        #check if the word is in the subset
+        inset = False
+        for k in keys:
+            if wordList[i].startswith(k):
+                inset = True
+        #only keep the words belonging to the set
+        if inset:
+            cnt += 1
+        else:
+            del wordList[i]
+    #show report
+    print ' Requested Subset selected successfully!'
+    print ' Subset contains',cnt,'words\n'
+
+
+
+
 
 def relateFile():
     """Scans the meanings field and searches for the matches mentioned in the arguments"""
@@ -591,6 +690,13 @@ def printHelp():
       <-del >: Deletes and specified existing session
       <-load>: Loads an specified existing session
 
+    subset   : Subset selection command prefix: subset-show etc.
+      <-show>  : Shows the list of the words in a subset specified
+                 by the keys in the arguments. Takes -cxx and --classify
+                 as optional arguments
+      <-select>: Selects the words in the subset of the remaining words
+                 specified by the keys in the arguments.
+
     system:    invoke a system command
     exit:      exit the program
 
@@ -617,6 +723,7 @@ def shortHelp():
     remaining: Shows the remaining words in the dictionary
     all:       Shows all the words in the dictionary
     session:   Session-management prefix. [Type 'Help' for details]
+    subset:    Subset selection prefix. [Type 'Help' for details]
     system:    invoke a system command
     exit:      exit the program
     """
@@ -645,6 +752,7 @@ cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMean
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
+            'subset-show':showSubset, 'subset-select':selectSubset,
             'system':systemCommands, 'exit':exit}
 dictname = ''
 loc = ''
