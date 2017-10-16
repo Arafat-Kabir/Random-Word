@@ -252,8 +252,8 @@ def showSubset():
     if len(keys)<=0:
         print ' Provide some valid keys\n'
         return
-    for k in keys:
-        k = k.lower()
+    for i in range(len(keys)):
+        keys[i] = keys[i].lower()
     #print the words in the subset
     print ' Words in the subset are:'
     cnt = 0
@@ -298,9 +298,9 @@ def selectSubset():
         return
     #print the keys
     print ' Subset selection keys:'
-    for k in keys:
-        k = k.lower()   #convert keys into lowercase
-        print '               ',k.upper()  #show in uppercase
+    for i in range(len(keys)):
+        keys[i] = keys[i].lower()   #convert keys into lowercase
+        print '               ',keys[i].upper()  #show in uppercase
     #discard non-matching words
     cnt = 0
     indx = range(len(wordList))
