@@ -1,0 +1,3 @@
+w: Rebus
+m: (noun); a type of puzzle in which pictures and symbols represents words
+s: Most people know a sort of puzzle called rebus

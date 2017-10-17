@@ -15,7 +15,7 @@ def clean(text):
         if temp == '' or temp.startswith('#'):
             del lines[i]
         else:
-            lines[i] = temp    
+            lines[i] = temp
 
     return lines
 
@@ -55,7 +55,7 @@ def selectDict(dictNames):
     for d in dictNames:
         print '\t|--',str(i)+'.',d
         i += 1
-    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ')
+    dselect = raw_input('\nChoose an option [0-'+str(i-1)+']: ').strip()
     if dselect.isdigit():
         dselect = int(dselect)-1  #index is 0 based
         if dselect == -1:    #session-load option
@@ -75,8 +75,9 @@ def selectDict(dictNames):
 
 def currentWord():
     if curword != '':
-        print ' Current Word:',curword
-        print ' Current dict:',dictname
+        print ' Current Word :',curword
+        print ' Current dict :',dictname
+        print ' File location:',loc
     else:
         print " No word selected yet"
     print ''
@@ -88,7 +89,7 @@ def nextWord():
     wleft = len(wordList)
     if wleft>0:
         indx = randint(0,wleft-1)
-        loc = dictname+'\\'+wordList[indx]
+        loc = dictname+'/'+wordList[indx]
         txt = open(loc).read()
         data = clean(txt)
         curword = extract(data,'w')
@@ -118,8 +119,8 @@ def selectWord():
     #process the input
     word = word.strip().lower()
     if word == '':
-        return        
-    word = dictname+'\\'+word+'.txt'
+        return
+    word = dictname+'/'+word+'.txt'
     #read the word from file
     if os.path.exists(word):
         loc = word
@@ -143,23 +144,37 @@ def showAll():
     global inp
     print ' Words in the dictionary are:'
     cols = 4  #default number of columns
-    # read the second argument as the number of columns
-    if len(inp)>1:
-        inp[1] = inp[1].strip()
-        if inp[1].startswith('-c'):
+    classify = False
+    # read the rest arguments
+    for i in range(1,len(inp)):
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[1] = inp[1][2:]  #srip off the -c 
-            if inp[1].isdigit():
+            inp[i] = inp[i][2:]  #srip off the -c
+            if inp[i].isdigit():
                 #print 'is digit'
-                inp[1] = int(inp[1])
-                if inp[1]<=15 and inp[1]>0:
+                inp[i] = int(inp[i])
+                if inp[i]<=15 and inp[i]>0:
                     #print 'assigned cols =', inp[1]
-                    cols = inp[1]
-    #print the remaining words
-    lst = os.listdir(os.getcwd()+'\\'+dictname)
+                    cols = inp[i]
+        elif inp[i] == '--classify':
+            classify = True
+    #print the words
+    lst = os.listdir(os.getcwd()+'/'+dictname)
     i = 0
+    first = ''
     for w in lst:
-        print '   %-15s' %w.replace('.txt','').capitalize(),
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #Print the word
+        print '   %-15s' %w,
         i += 1
         if i==cols:
             print ''
@@ -172,27 +187,140 @@ def showRemaining():
     global inp
     print ' Remaining words in the dictionary are:'
     cols = 4  #default number of columns
-    # read the second argument as the number of columns
-    if len(inp)>1:
-        inp[1] = inp[1].strip()
-        if inp[1].startswith('-c'):
+    classify = False
+    # read the rest arguments
+    for i in range(1,len(inp)):
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
             #print 'starts with -c'
-            inp[1] = inp[1][2:]  #srip off the -c 
-            if inp[1].isdigit():
+            inp[i] = inp[i][2:]  #srip off the -c
+            if inp[i].isdigit():
                 #print 'is digit'
-                inp[1] = int(inp[1])
-                if inp[1]<=15 and inp[1]>0:
+                inp[i] = int(inp[i])
+                if inp[i]<=15 and inp[i]>0:
                     #print 'assigned cols =', inp[1]
-                    cols = inp[1]
+                    cols = inp[i]
+        elif inp[i] == '--classify':
+            classify = True
     #print the remaining words
     i = 0
+    first = ''
     for w in wordList:
-        print '   %-15s' %w.replace('.txt','').capitalize(),
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #print the word
+        print '   %-15s' %w,
         i += 1
         if i==cols:
             print ''
             i=0
     print '\n\n Total remaining:',len(wordList),'words\n'
+
+
+#------------- Subset operations ----------------
+def showSubset():
+    global inp
+    cols = 4  #default number of columns
+    classify = False
+    # read the display options
+    indx = range(len(inp))[1:]
+    indx.reverse()
+    for i in indx:
+        inp[i] = inp[i].strip()
+        if inp[i].startswith('-c'):
+            #print 'starts with -c'
+            temp = inp[i][2:]  #srip off the -c
+            if temp.isdigit():
+                #print 'is digit'
+                temp = int(temp)
+                if temp<=15 and temp>0:
+                    #print 'assigned cols =', inp[1]
+                    cols = temp
+                    del inp[i]
+        elif inp[i] == '--classify':
+            classify = True
+            del inp[i]
+    #extract subset select keys
+    keys = inp[1:]
+    if len(keys)<=0:
+        print ' Provide some valid keys\n'
+        return
+    for i in range(len(keys)):
+        keys[i] = keys[i].lower()
+    #print the words in the subset
+    print ' Words in the subset are:'
+    cnt = 0
+    i = 0
+    first = ''
+    for w in wordList:
+        inset = False
+        for k in keys:
+            if w.startswith(k):
+                inset = True
+        if inset == False:
+            continue
+        cnt += 1
+        w = w.replace('.txt','').capitalize()
+        #classify according to first letter
+        if classify:
+            if first != w[0]:
+                first = w[0]
+                i = 0
+                head = cols*9
+                format = '\n\n  %'+str(head)+'s'
+                print format %first
+        #print the word
+        print '   %-15s' %w,
+        i += 1
+        if i==cols:
+            print ''
+            i=0
+    if cnt <=0:
+        print ' --- No word belongs to your subset ---\n'
+    else:
+        print '\n\n Subset contains:',cnt,'words\n'
+
+
+
+def selectSubset():
+    global inp
+    #extract subset select keys
+    keys = inp[1:]
+    if len(keys)<=0:
+        print ' Provide some valid keys\n'
+        return
+    #print the keys
+    print ' Subset selection keys:'
+    for i in range(len(keys)):
+        keys[i] = keys[i].lower()   #convert keys into lowercase
+        print '               ',keys[i].upper()  #show in uppercase
+    #discard non-matching words
+    cnt = 0
+    indx = range(len(wordList))
+    indx.reverse()  #take a reverse approach
+    for i in indx:
+        #check if the word is in the subset
+        inset = False
+        for k in keys:
+            if wordList[i].startswith(k):
+                inset = True
+        #only keep the words belonging to the set
+        if inset:
+            cnt += 1
+        else:
+            del wordList[i]
+    #show report
+    print ' Requested Subset selected successfully!'
+    print ' Subset contains',cnt,'words\n'
+
+
 
 
 
@@ -208,7 +336,7 @@ def relateFile():
             del inp[i]
         elif inp[i].startswith('-c'):   #set the column number
             #print 'starts with -c'
-            inp[i] = inp[i][2:]  #srip off the -c 
+            inp[i] = inp[i][2:]  #srip off the -c
             if inp[i].isdigit():
                 #print 'is digit'
                 inp[i] = int(inp[i])
@@ -220,13 +348,15 @@ def relateFile():
     if len(inp)<2:
         print " Enter keywords to search\n"
     else:
-        fileList = glob(dictname+'\\*')   #load files list
+        fileList = glob(dictname+'/*')   #load files list
         searchResult = {}
         #search through the files
         for f in fileList:
             content = open(f).read().lower()
             content = clean(content)
-            content = extract(content,'m')  #extract the meanings only
+            temp1 = extract(content,'m')  #extract the meanings only
+            temp2 = extract(content,'w')  #extract the meanings only
+            content = temp2 + ' ' + temp1
             for keyword in inp[1:]:
                 if searchResult.has_key(keyword) == False:
                     searchResult[keyword] = []  #add an empty list
@@ -268,19 +398,19 @@ def showHint():
 def showMeaning():
     if curword=='':
         print " No word selected yet\n"
-        return    
+        return
     for m in means:
         print '',m.strip()
     print ''
 
 
 
-def markHard():   
+def markHard():
     """Copies the currenly selected file to the 'hard' dictionary"""
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet\n"
-        return         
+        return
     if os.path.exists(loc)==False:
         print " File not found:",loc+'\n'
         return
@@ -288,7 +418,7 @@ def markHard():
     if os.path.exists(dest):
         print " Word is already marked as hard\n"
         return
-    if os.path.exists('hard\\')==False:
+    if os.path.exists('hard/')==False:
         os.mkdir('hard')
     #copy the file
     copyfile(loc, dest)
@@ -297,10 +427,10 @@ def markHard():
 
 
 def unmarkHard():
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet"
-        return         
+        return
     dest = loc.replace(dictname,'hard')
     if os.path.exists(dest)==False:
         print " '"+curword+"' is not in the 'hard' dictionary\n"
@@ -315,12 +445,12 @@ def unmarkHard():
 
 def sessionSave():
     """Writes the session variables value into an external file inside the sessions directory"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
-    #error handling 
+    #error handling
     if curword=='':
         print " No word selected yet\n"
-        return         
+        return
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
     # read second argument as the selected session name
@@ -338,7 +468,7 @@ def sessionSave():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name):
+    if os.path.exists('sessions/'+name):
         #--look for overwrite option--
         if len(inp)>2:
             if inp[2].strip().lower() == '-o':
@@ -369,7 +499,7 @@ def sessionSave():
         data += w+';'
     #print data
     #save the recorded data
-    f = open('sessions\\'+name,'w')
+    f = open('sessions/'+name,'w')
     f.write(data)
     f.close()
     print ' Session data saved successfully\n'
@@ -378,7 +508,7 @@ def sessionSave():
 
 def sessionLoad():
     """Loads the specified session file"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
@@ -397,12 +527,12 @@ def sessionLoad():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name)==False:
+    if os.path.exists('sessions/'+name)==False:
         print ' No such session exists!'
         sessionList()
         return
     else:
-        if parseSessionData(open('sessions\\'+name).read())==True:
+        if parseSessionData(open('sessions/'+name).read())==True:
             print ' Session loaded successfully\n'
             return True
         else:
@@ -473,7 +603,7 @@ def parseSessionData(data):
 
 def sessionDelete():
     """Deletes the specified session file"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
     #name = "session-"+str(randint(0,9))+str(randint(-9,-1))
     name = ''
@@ -492,21 +622,21 @@ def sessionDelete():
         print ''
         return
     name += '.session'
-    if os.path.exists('sessions\\'+name)==False:
+    if os.path.exists('sessions/'+name)==False:
         print ' No such session exists!'
         sessionList()
         return
     else:
-        os.remove('sessions\\'+name)
+        os.remove('sessions/'+name)
         print ' Session file removed successfully\n'
 
 
 
 def sessionList():
     """Lists the saved sessions"""
-    if os.path.exists('sessions\\')==False:
+    if os.path.exists('sessions/')==False:
         os.mkdir('sessions')
-    lst = os.listdir(os.getcwd()+'\\sessions')
+    lst = os.listdir(os.getcwd()+'/sessions')
     if(len(lst)<1):
         print " No saved sessions found"
     else:
@@ -533,25 +663,67 @@ def systemCommands():
 
 def printHelp():
     print """ Following commands are Available:
-    help:      prints this help message
+    help:      Prints this help message
+    next:      Select a new word randomly
+    hint:      Shows a sentence using the current word
+    reveal:    Reveals the meanings of current word
+    this:      Shows selected word and dictionary name
+    mark-hard: Copies the current word into the 'hard' dictionary
+    not-hard:  Removes the current word from the 'hard' dictionary
+    clear:     Clear the screen
+    select:    Select a word by typing it
+    relate:    Relates specified keywords with the dictionary words
+
+    remaining: Shows the remaining words in the dictionary
+      [ -cxx]     : Specifies the number of columns to be printed
+      [--classify]: Classify the words by the first letter
+
+    all:       Shows all the words in the dictionary
+      [ -cxx]     : Specifies the number of columns to be printed
+      [--classify]: Classify the words by the first letter
+
+    session  : Session management command prefix: session-list etc.
+      <-list>: Shows the list of previously saved sessions
+      <-save>: Saves the current session; [-o] to force overwrite
+               [name] : Specify session name
+               [-o]   : Force overwrite existing session file
+      <-del >: Deletes and specified existing session
+      <-load>: Loads an specified existing session
+
+    subset   : Subset selection command prefix: subset-show etc.
+      <-show>  : Shows the list of the words in a subset specified
+                 by the keys in the arguments. Takes -cxx and --classify
+                 as optional arguments
+      <-select>: Selects the words in the subset of the remaining words
+                 specified by the keys in the arguments.
+
+    system:    invoke a system command
+    exit:      exit the program
+
+    --------------------------------------------------------
+
+    P.S: All commands are case-insensitive
+         [xx] means optional arguments separated by spaces
+         <xx> compulsory postfix without spaces
+    """
+
+
+def shortHelp():
+    print """ Following commands are Available:
+    help:      Prints a detailed help message
     next:      select a new word randomly
     hint:      shows a sentence using the current word
     reveal:    reveals the meanings of current word
-    this:      shows select word and dictionary name
+    this:      Shows selected word and dictionary name
     mark-hard: Copies the current word into the 'hard' dictionary
     not-hard:  Removes the current word from the 'hard' dictionary
     clear:     Clear the screen
     select:    Select a word by typing it
     relate:    relates specified keywords with the dictionary words
     remaining: Shows the remaining words in the dictionary
-      [ -cxx]: specifies the number of columns to be printed
     all:       Shows all the words in the dictionary
-      [ -cxx]: specifies the number of columns to be printed
-    session
-      [-list]: Shows the list of previously saved sessions
-      [-save]: Saves the current session; [-o] to force overwrite
-      [-del ]: Deletes and specified existing session
-      [-load]: Loads an specified existing session
+    session:   Session-management prefix. [Type 'Help' for details]
+    subset:    Subset selection prefix. [Type 'Help' for details]
     system:    invoke a system command
     exit:      exit the program
     """
@@ -559,7 +731,10 @@ def printHelp():
 
 
 def clearScreen():
-    os.system('cls')
+    if os.name == 'nt':
+        os.system('cls')
+    elif os.name == 'posix':
+        os.system('clear')
 
 
 
@@ -573,10 +748,11 @@ intro = """\
 |                                       |
 -----------------------------------------
 """
-cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord, 
+cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord,
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
+            'subset-show':showSubset, 'subset-select':selectSubset,
             'system':systemCommands, 'exit':exit}
 dictname = ''
 loc = ''
@@ -587,18 +763,18 @@ sents = []
 inp = []
 
 #--initializations--
-os.system('cls')
+clearScreen()
 print intro
 dictList = loadDictNames()        #loads available dictionary names for selection prompt
 dictname = selectDict(dictList)   #selects and specify the selected dictionary, load a session
 
 if len(wordList)==0:
     print "Selected dictionary:",dictname
-    wordList = os.listdir(os.getcwd()+'\\'+dictname)
+    wordList = os.listdir(os.getcwd()+'/'+dictname)
 else:
     currentWord()  #a session was loaded, show current status
 print ''
-printHelp()  #show help at the beginning
+shortHelp()  #show help at the beginning
 
 #--Command processing loop--
 while True:

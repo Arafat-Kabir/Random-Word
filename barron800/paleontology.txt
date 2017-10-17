@@ -1,0 +1,3 @@
+w: Paleontology
+m: (noun); study of past geological eras through fossil remains
+s: When we went to the museum of paleontology, I saw several dinosaur fossils

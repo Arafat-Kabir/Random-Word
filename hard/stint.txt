@@ -1,9 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Stint
-
-m: (verb); to provide or use small amount of something; be economical or frugal about something; set limits
-
-s: He doesn't stint on wining and dining. To avoid having to stint yourself, budget in advance. She never stints on the food at her parties

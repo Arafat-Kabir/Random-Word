@@ -1,0 +1,3 @@
+w: Rubric
+m: (noun); protocol; title or heading
+s: The testing company assured its graders that they would be using a rubric to grade each essay

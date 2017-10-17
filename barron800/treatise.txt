@@ -1,0 +1,3 @@
+w: Treatise
+m: (noun); article treating a subject systematically and thoroughly; [documentation]
+s: Ted's treatise on Zoology was thorough and systematic

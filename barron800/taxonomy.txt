@@ -1,0 +1,3 @@
+w: Taxonomy
+m: (noun); science of classification
+s: :P

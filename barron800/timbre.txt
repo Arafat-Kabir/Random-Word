@@ -1,0 +1,3 @@
+w: Timbre
+m: (noun); The quality of a sound aside from its volume and pitch
+s: Each musical instrument has a unique timbre because of its specific design

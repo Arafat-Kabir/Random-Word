@@ -1,0 +1,3 @@
+w: Syllogism
+m: (noun); a line of reasoning in which conclusion is drawn from two related premises
+s: Some people use syllogism to say that just one person is bad and they are part of a certain culture that the entire culture is equally bad

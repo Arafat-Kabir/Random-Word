@@ -1,8 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Pervasive
-m: (adj.); spread throughout; capable of affecting or influencing everything
-
-s: The media's pervasive coverage of the epidemic has most of the country living in fear. The burnt chicken smell was pervasive and gloated throughout the entire house
