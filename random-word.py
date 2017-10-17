@@ -325,7 +325,7 @@ def selectSubset():
 
 
 def relateFile():
-    """Scans the meanings field and searches for the matches mentioned in the arguments"""
+    """Scans the meanings and word fields and searches for the matches mentioned in the arguments"""
     global inp;
     cols = 4  #default no of columns
     #process the arguments
