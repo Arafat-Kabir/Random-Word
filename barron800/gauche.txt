@@ -1,0 +1,3 @@
+w: Gauche
+m: (adj.); lacking manners; clumsy; socially awkward
+s: His gauche table manners disgust me. People hate him because of his gauche behaviors

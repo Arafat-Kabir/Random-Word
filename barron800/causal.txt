@@ -1,0 +1,4 @@
+
+w: Causal
+m: (adj.); relating to ro acting as a cause; involving a cause
+s: The causal factors associated with illness. Don't overuse a causal connective like 'because'

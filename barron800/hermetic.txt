@@ -1,0 +1,3 @@
+w: Hermetic
+m: (adj.); complete and airtight; sealed; insulated or protected
+s: A hermetic seal that ensures perfect water-proofing. A hermetic society

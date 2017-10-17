@@ -1,0 +1,3 @@
+w: Etiology
+m: (noun); cause or origin
+s: He is infected by a diseases of unknown Etiology. The Etiology of these events is unknnown
