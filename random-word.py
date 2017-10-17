@@ -770,7 +770,10 @@ dictname = selectDict(dictList)   #selects and specify the selected dictionary, 
 
 if len(wordList)==0:
     print "Selected dictionary:",dictname
-    wordList = os.listdir(os.getcwd()+'/'+dictname)
+    try:
+        wordList = os.listdir(os.getcwd()+'/'+dictname)
+    except:
+        close("---Selected dictionary doesn't exist---")
 else:
     currentWord()  #a session was loaded, show current status
 print ''
