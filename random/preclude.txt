@@ -1,0 +1,3 @@
+w: Preclude
+m: (verb); prevent
+s: No example sentence!

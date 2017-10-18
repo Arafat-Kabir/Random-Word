@@ -1,0 +1,3 @@
+w: Incinerate
+m: (verb); destroy something by burning
+s: No example sentence!

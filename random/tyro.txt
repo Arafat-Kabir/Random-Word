@@ -1,0 +1,3 @@
+w: Tyro
+m: (noun); beginner; novice
+s: No example sentence!

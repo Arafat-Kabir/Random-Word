@@ -1,0 +1,3 @@
+w: Ponder
+m: think about carefully
+s: No example sentence!

@@ -1,0 +1,3 @@
+w: Folly
+m: (noun); foolishness
+s: No example sentence!

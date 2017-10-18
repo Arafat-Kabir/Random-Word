@@ -26,6 +26,9 @@ def extract(data, key):
     for d in data:
         if d.startswith(key):
             return d.replace(key+':','').strip()   #remove the parser tag then remove the spaces
+    print ' meaning not found'
+    currentWord()
+    return ''
 
 
 

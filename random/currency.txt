@@ -1,0 +1,3 @@
+w: Currency
+m: (noun); generally accepted fact
+s: No example sentence!

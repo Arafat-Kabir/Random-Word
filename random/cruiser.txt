@@ -1,0 +1,3 @@
+w: Cruiser
+m: (noun); a fast warship
+s: No example sentence!

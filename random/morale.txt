@@ -1,0 +1,3 @@
+w: Morale
+m: (noun); confidence; enthusiasm and discipline of a person
+s: No example sentence!

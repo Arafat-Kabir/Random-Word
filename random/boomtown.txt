@@ -1,0 +1,3 @@
+w: boomtown
+m: a town undergoing rapid growth
+s: No example sentence!

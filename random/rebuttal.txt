@@ -1,0 +1,3 @@
+w: Rebuttal
+m: A contradiction
+s: No example sentence!

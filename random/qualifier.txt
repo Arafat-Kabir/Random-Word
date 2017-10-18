@@ -1,0 +1,3 @@
+w: Qualifier
+m: (noun); in science, the assumptions for a theory to be true; in grammar, a word or phrase added after a noun to qualify its meaning
+s: No example sentence!

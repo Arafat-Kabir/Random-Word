@@ -1,0 +1,3 @@
+w: Valor
+m: (noun); courage
+s: No example sentence!

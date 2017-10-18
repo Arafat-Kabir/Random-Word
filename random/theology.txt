@@ -1,0 +1,3 @@
+w: Theology
+m: study of god
+s: No example sentence!
