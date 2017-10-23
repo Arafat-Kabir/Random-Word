@@ -668,8 +668,11 @@ def printHelp():
     print """ Following commands are Available:
     help:      Prints this help message
     next:      Select a new word randomly
-    hint:      Shows a sentence using the current word
+               Short-hand: n
+    hint:      Shows a sentence using the current word.
+               Short-hand: h
     reveal:    Reveals the meanings of current word
+               Short-hand: r
     this:      Shows selected word and dictionary name
     mark-hard: Copies the current word into the 'hard' dictionary
     not-hard:  Removes the current word from the 'hard' dictionary
@@ -751,7 +754,7 @@ intro = """\
 |                                       |
 -----------------------------------------
 """
-cmdList =  {'help':printHelp, 'next':nextWord, 'hint':showHint,'reveal':showMeaning, 'this':currentWord,
+cmdList =  {'help':printHelp, 'next':nextWord, 'n':nextWord, 'hint':showHint, 'h':showHint,'reveal':showMeaning,'r':showMeaning, 'this':currentWord,
             'mark-hard':markHard, 'not-hard':unmarkHard, 'clear':clearScreen,'remaining':showRemaining, 'all':showAll,
             'select':selectWord,'relate':relateFile,
             'session-list':sessionList, 'session-save':sessionSave, 'session-del':sessionDelete, 'session-load':sessionLoad,
