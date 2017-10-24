@@ -1,3 +1,3 @@
 w: Vilify
 m: (verb); speak abusively; disparage
-s: No example sentence!
+s: No example sentence! Changed
