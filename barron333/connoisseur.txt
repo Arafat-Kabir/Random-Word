@@ -1,4 +1,3 @@
-
-w: Contention
-m: (noun); a disput between groups or individuals; hatred disaggreement; [conflict]
-s: Does anyone know the point of contention that started the fight between them? . The error was raised due to logic contention 
+w: Connoisseur
+m: (noun); an expert judge of art; an expert
+s: He is a connoisseur of music. A true coffee connoisseur never drinks instant coffee
