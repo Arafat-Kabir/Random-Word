@@ -1,0 +1,3 @@
+w: Aptitude
+m: (noun); a natural ability to do something; talent; capability; capacity
+s: No hint!

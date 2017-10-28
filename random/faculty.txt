@@ -1,0 +1,3 @@
+w: Faculty
+m: (noun); an inherent mental or physical power; capability; capacity
+s: No hint!

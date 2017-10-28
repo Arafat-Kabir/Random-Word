@@ -1,0 +1,3 @@
+w: Stretch
+m: (verb); extend
+s: No hint!

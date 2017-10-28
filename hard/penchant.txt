@@ -1,8 +1,0 @@
-# w for word
-# m for meanings, Separated by ';'
-# s for sentences, Separated by dot(.)
-
-w: Penchant
-m: (noun); strong inclination; liking; tendency to do something; [strong liking]
-
-s: He has a penchant for adopting stray dogs. Hackers have a penchant for breaking into secure areas. Juliet, a music major, had a penchant for playing piano

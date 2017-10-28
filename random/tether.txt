@@ -1,0 +1,3 @@
+w: Tether
+m: (verb); tie with a rope; restrict movement
+s: No hint!

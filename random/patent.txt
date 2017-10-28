@@ -1,0 +1,3 @@
+w: Patent
+m: copyright; obvious; right; control
+s: No hint!

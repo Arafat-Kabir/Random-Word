@@ -1,0 +1,3 @@
+w: Nausea
+m: (noun); a feeling of sickness with an inclination to vomit.
+s: No hint!

@@ -1,0 +1,3 @@
+w: Eloquent
+m: (adj.); fluent; articulate; expressive
+s: No hint!

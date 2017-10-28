@@ -1,0 +1,3 @@
+w: Constrain
+m: (verb); confine; force an action
+s: No hint!

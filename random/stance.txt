@@ -1,0 +1,3 @@
+w: Stance
+m: (noun); a person's posture; body position
+s: No hint!

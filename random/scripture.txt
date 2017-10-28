@@ -1,0 +1,3 @@
+w: Scripture
+m: (noun); sacred writings of christianity contained in bible
+s: No hint!
