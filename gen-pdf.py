@@ -65,7 +65,14 @@ format = """
 """
 output = 'output.tex'
 render = ''
-files = glob('*.txt')
+
+folder = raw_input('Enter Folder name: ').strip()
+output = raw_input('Enter output file name: ').strip()
+if os.path.isdir(folder)==False:
+    raw_input(" The Folder doesn't exit!\n Closing program...\n Press Enter to continue...");
+    exit();
+
+files = glob(folder+'/*.txt')
 for f in files:
     print 'working on',f
     txt = open(f).read()
@@ -87,12 +94,12 @@ for f in files:
     render += temp+'\n'
 render += '\\bye'
 
-f = open(output,'w')
+f = open(output+'.tex','w')
 f.write(render)
 f.close()
 inp = raw_input("Should I run pdfTex? (Y/N): ").strip().lower()
 if inp.startswith('y'):
-    os.system('pdftex output.tex')
+    os.system('pdftex '+output+'.tex')
     print '---- PDF file generated ----'
 close('')
 
