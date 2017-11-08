@@ -6,3 +6,4 @@ barronAll
 hard
 temp
 random
+tempall
